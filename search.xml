@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[数据库安全——SQL注入]]></title>
+    <url>%2F2017%2F04%2F07%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E2%80%94%E2%80%94SQL%E6%B3%A8%E5%85%A5%2F</url>
+    <content type="text"><![CDATA[不管用什么语言编写的Web应用，它们都用一个共同点，具有交互性并且多数是数据库驱动。在网络中，数据库驱动的Web应用随处可见，由此而存在的SQL注入是影响企业运营且最具破坏性的漏洞之一。 SQL注入定义SQL注入（SQL injection），简称注入攻击，是发生于应用程序之数据库层的安全漏洞。简而言之，是在输入的字符串之中注入SQL指令，在设计不良的程序当中忽略了检查，那么这些注入进去的指令就会被数据库服务器误认为是正常的SQL指令而运行，因此遭到破坏或是入侵。 简单解释：SQL注入就是一种通过操作输入来修改后台SQL语句达到代码执行进行攻击目的的技术。 SQL注入实例多语句执行注入Get请求语句： 1http://localhost/test/userinfo.php?username=plhwin SQL语句： 1SELECT uid,username FROM user WHERE username='plhwin' 如果用户Get请求改为： 1http://localhost/test/userinfo.php?username=plhwin';SHOW TABLES-- hack SQL语句变为： 1SELECT uid,username FROM user WHERE username='plhwin';SHOW TABLES-- hack' 经过上面的SQL注入后，页面输出了所有表信息。 如果用户接着Get请求： 1http://localhost/test/userinfo.php?username=plhwin';DROP TABLE user-- hack 整个user数据库表都消失了。 or方法注入一Web登录表单： 12345&lt;form action="/login" method="POST"&gt; &lt;p&gt;Username: &lt;input type="text" name="username" /&gt;&lt;/p&gt; &lt;p&gt;Password: &lt;input type="password" name="password" /&gt;&lt;/p&gt; &lt;p&gt;&lt;input type="submit" value="登录" /&gt;&lt;/p&gt;&lt;/form&gt; 后台处理逻辑： 123username:=r.Form.Get("username")password:=r.Form.Get("password")sql:="SELECT * FROM user WHERE username='"+username+"' AND password='"+password+"'" 普通用户输入： 12账户：myuser密码：xxx SQL语句： 1SELECT * FROM user WHERE username='myuser' AND password='xxx' 如果用户输入： 12账户：myuser' or 'foo' = 'foo' --密码：xxx SQL语句变为： 1SELECT * FROM user WHERE username='myuser' or 'foo' = 'foo' --'' AND password='xxx' 在SQL里面–是注释标记，所以查询语句会在此中断。这就让攻击者在不知道任何合法用户名和密码的情况下成功登录了。 or方法注入二SQL语句： 1strSQL = "SELECT * FROM users WHERE (name = '" + userName + "') and (pw = '"+ passWord +"');" 如果用户输入： 12userName = "1' OR '1'='1";passWord = "1' OR '1'='1"; SQL语句变为： 1strSQL = "SELECT * FROM users WHERE (name = '1' OR '1'='1') and (pw = '1' OR '1'='1');" 上面的SQL语句相当于： strSQL = “SELECT * FROM users;” 控制系统某些版本MSSQL数据库系统命令： 12sql:="SELECT * FROM products WHERE name LIKE '%"+prod+"%'"Db.Exec(sql) 如果攻击者提交一下内容作为变量prod的值： 1a%' exec master..xp_cmdshell 'net user test testpass /ADD' -- SQL语句变为： 1SELECT * FROM products WHERE name LIKE '%a%' exec master..xp_cmdshell 'net user test testpass /ADD'--%' MSSQL服务器会执行这条SQL语句，包括它后面那个用于向系统添加新用户的命令。如果这个程序是以sa运行而 MSSQLSERVER服务又有足够的权限的话，攻击者就可以获得一个系统帐号来访问主机了。 可能危害 数据表中的数据外泄，例如个人机密数据，账户数据，密码等。 数据结构被黑客探知，得以做进一步攻击（例如SELECT * FROM sys.tables）。 数据库服务器被攻击，系统管理员账户被窜改（例如ALTER LOGIN sa WITH PASSWORD=’xxxxxx’）。 获取系统较高权限后，有可能得以在网页加入恶意链接、恶意代码以及XSS等。 经由数据库服务器提供的操作系统支持，让黑客得以修改或控制操作系统（例如xp_cmdshell “net stop iisadmin”可停止服务器的IIS服务）。 破坏硬盘数据，瘫痪全系统（例如xp_cmdshell “FORMAT C:”）。 避免办法SQL注入攻击的危害这么大，那么该如何来防治呢?下面这些建议或许对防治SQL注入有一定的帮助。 严格限制Web应用的数据库的操作权限，给此用户提供仅仅能够满足其工作的最低权限，从而最大限度的减少注入攻击对数据库的危害。 检查输入的数据是否具有所期望的数据格式，严格限制变量的类型，例如使用regexp包进行一些匹配处理，或者使用strconv包对字符串转化成其他基本类型的数据进行判断。 对进入数据库的特殊字符（’”\尖括号&amp;*;等）进行转义处理，或编码转换。Go的text/template包里面的HTMLEscapeString函数可以对字符串进行转义处理。 所有的查询语句建议使用数据库提供的参数化查询接口，参数化的语句使用参数而不是将用户输入变量嵌入到SQL语句中，即不要直接拼接SQL语句。例如使用database/sql里面的查询函数Prepare和Query，或者Exec(query string, args …interface{})。 在应用发布之前建议使用专业的SQL注入检测工具进行检测，以及时修补被发现的SQL注入漏洞。网上有很多这方面的开源工具，例如sqlmap、SQLninja等。 避免网站打印出SQL错误信息，比如类型错误、字段不匹配等，把代码里的SQL语句暴露出来，以防止攻击者利用这些错误信息进行SQL注入。]]></content>
+      <tags>
+        <tag>datebase</tag>
+        <tag>safe</tag>
+        <tag>sql</tag>
+        <tag>injection</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo安装NexT主题搭建Github博客]]></title>
+    <url>%2F2017%2F03%2F27%2FHexo%E5%AE%89%E8%A3%85NexT%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BAGithub%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[Hexo 是高效的静态站点生成框架，她基于 Node.js。通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。 搭建博客创建Github仓库在Github页面的右上方选择New repository进行仓库的创建 1my-name.github.io 安装配置Hexo 下载安装Hexo 1npm install -g hexo-cli 初始化Blog 1hexo init blog 下载dependencies 12cd blognpm install 站点配置(blog/_config.yml) 12345678910title: my-titlesubtitle: my-subtitledescription: my-descriptionauthor: my-namelanguage: zh-CNtimezone: Asia/Shanghaideploy: type: git repo: https://github.com/my-name/my-name.github.io.git branch: master 添加标签页面 1hexo new page "tags" 编辑页面(blog/source/tags) 12type: "tags"comments: false 添加评论系统 1234disqus: enable: true shortname: my-shortname count: true 添加NexT主题下载主题 1git clone https://github.com/iissnan/hexo-theme-next themes/next 启用主题(blog/_config.yml) 1theme: next 选择Scheme(blog/themes/next/_config.yml) 123#scheme: Musescheme: Mist#scheme: Pisces 设置头像(blog/themes/next/_config.yml) avatar放置在blog/themes/next/source/images/目录下 1avatar: /images/avatar.jpg 设置昵称 1author: my-name 站点描述 1description: 总有刁民想害朕 本地测试本地发布 1hexo server 浏览器访问http://localhost:4000/ 远程测试部署到Github 生成网站静态文件到默认public文件 1hexo generate 自动生成静态文件并部署到设定的仓库 1hexo deploy 浏览器访问http://my-name.github.io 如:http://hihcys.github.io 发表文章新建文章 1hexo new "my-first-article" 编辑文章(blog/source/_posts) 1retext my-first-article.md 提交到远程 12hexo generatehexo deploy 相关链接Hexo框架官方文档 Text主题官方文档 Git中文版学习资料]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>github</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F03%2F27%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+</search>
