@@ -12,6 +12,14 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F03%2F27%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo安装NexT主题搭建Github博客]]></title>
     <url>%2F2017%2F03%2F27%2FHexo%E5%AE%89%E8%A3%85NexT%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BAGithub%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[Hexo 是高效的静态站点生成框架，她基于 Node.js。通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 标签插件 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。 搭建博客创建Github仓库在Github页面的右上方选择New repository进行仓库的创建 1my-name.github.io 安装配置Hexo 下载安装Hexo 1npm install -g hexo-cli 初始化Blog 1hexo init blog 下载dependencies 12cd blognpm install 站点配置(blog/_config.yml) 12345678910title: my-titlesubtitle: my-subtitledescription: my-descriptionauthor: my-namelanguage: zh-CNtimezone: Asia/Shanghaideploy: type: git repo: https://github.com/my-name/my-name.github.io.git branch: master 添加标签页面 1hexo new page "tags" 编辑页面(blog/source/tags) 12type: "tags"comments: false 添加评论系统 1234disqus: enable: true shortname: my-shortname count: true 添加NexT主题下载主题 1git clone https://github.com/iissnan/hexo-theme-next themes/next 启用主题(blog/_config.yml) 1theme: next 选择Scheme(blog/themes/next/_config.yml) 123#scheme: Musescheme: Mist#scheme: Pisces 设置头像(blog/themes/next/_config.yml) avatar放置在blog/themes/next/source/images/目录下 1avatar: /images/avatar.jpg 设置昵称 1author: my-name 站点描述 1description: 总有刁民想害朕 本地测试本地发布 1hexo server 浏览器访问http://localhost:4000/ 远程测试部署到Github 生成网站静态文件到默认public文件 1hexo generate 自动生成静态文件并部署到设定的仓库 1hexo deploy 浏览器访问http://my-name.github.io 如:http://hihcys.github.io 发表文章新建文章 1hexo new "my-first-article" 编辑文章(blog/source/_posts) 1retext my-first-article.md 提交到远程 12hexo generatehexo deploy 相关链接Hexo框架官方文档 Text主题官方文档 Git中文版学习资料]]></content>
@@ -20,14 +28,6 @@
         <tag>next</tag>
         <tag>github</tag>
         <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2017%2F03%2F27%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
