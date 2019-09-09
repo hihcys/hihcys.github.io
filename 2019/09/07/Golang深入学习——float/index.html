@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="golang,数据结构,float,浮点数,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="所以表不忘初心，而必果本愿也。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="青青草原">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+<meta name="description" content="在计算机科学中，浮点数是一种对于实数的近似值数值表现法，利用浮点进行运算，称为浮点计算，这种运算通常伴随着因为无法精确表示而进行的近似或舍入。Go提供了两种size的浮点数，float32和float64。它们的算术规范是由IEEE754国际标准定义，现代CPU都实现了这个规范。">
+<meta name="keywords" content="golang,数据结构,float,浮点数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Golang深入学习——float.md">
+<meta property="og:url" content="http://yoursite.com/2019/09/07/Golang深入学习——float/index.html">
 <meta property="og:site_name" content="青青草原">
-<meta property="og:description" content="所以表不忘初心，而必果本愿也。">
+<meta property="og:description" content="在计算机科学中，浮点数是一种对于实数的近似值数值表现法，利用浮点进行运算，称为浮点计算，这种运算通常伴随着因为无法精确表示而进行的近似或舍入。Go提供了两种size的浮点数，float32和float64。它们的算术规范是由IEEE754国际标准定义，现代CPU都实现了这个规范。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-09T07:17:18.321Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="青青草原">
-<meta name="twitter:description" content="所以表不忘初心，而必果本愿也。">
+<meta name="twitter:title" content="Golang深入学习——float.md">
+<meta name="twitter:description" content="在计算机科学中，浮点数是一种对于实数的近似值数值表现法，利用浮点进行运算，称为浮点计算，这种运算通常伴随着因为无法精确表示而进行的近似或舍入。Go提供了两种size的浮点数，float32和float64。它们的算术规范是由IEEE754国际标准定义，现代CPU都实现了这个规范。">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/07/Golang深入学习——float/">
 
 
 
 
 
-  <title>归档 | 青青草原</title>
+  <title>Golang深入学习——float.md | 青青草原</title>
   
 
 
@@ -143,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,142 +261,262 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/07/Golang深入学习——float/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hihcys">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="青青草原">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Golang深入学习——float.md</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-07T17:37:48+08:00">
+                2019-09-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 5 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/09/07/Golang深入学习——float/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/07/Golang深入学习——float/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-        
+          
+          
+             <span id="/2019/09/07/Golang深入学习——float/" class="leancloud_visitors" data-flag-title="Golang深入学习——float.md">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/07/数据库安全——SQL注入/" itemprop="url">
-              
-                <span itemprop="name">数据库安全——SQL注入</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-04-07T19:44:07+08:00" content="2017-04-07">
-          04-07
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/27/Hexo安装NexT主题搭建Github博客/" itemprop="url">
-              
-                <span itemprop="name">Hexo安装NexT主题搭建Github博客</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-03-27T17:53:05+08:00" content="2017-03-27">
-          03-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/27/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-03-27T17:53:05+08:00" content="2017-03-27">
-          03-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <p>在计算机科学中，浮点数是一种对于实数的近似值数值表现法，利用浮点进行运算，称为浮点计算，这种运算通常伴随着因为无法精确表示而进行的近似或舍入。Go提供了两种size的浮点数，float32和float64。它们的算术规范是由IEEE754国际标准定义，现代CPU都实现了这个规范。</p>
+<a id="more"></a>
+
+<h2 id="内存中的float32"><a href="#内存中的float32" class="headerlink" title="内存中的float32"></a>内存中的float32</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>float32——单精度浮点类型使用32位（4个字节）存储一个浮点数。</p>
+<p>IEEE754-2008中定义了它的结构：</p>
+<table>
+<thead>
+<tr>
+<th>符号位</th>
+<th>指数</th>
+<th>尾数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>S</td>
+<td>EEEEEEEE</td>
+<td>FFFFFFFFFFFFFFFFFFFFFFF</td>
+</tr>
+<tr>
+<td>1位二进制表示符号: 0,正; 1,负</td>
+<td>8位二进制表示127偏移量的指数</td>
+<td>23位二进制表示23+1位小数部分</td>
+</tr>
+</tbody></table>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>以6.9为例子，将生活中常见的十进制转化为机器存储的二进制float。</p>
+<ol>
+<li>将整数和小数部分分别转化为二进制；</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">6（十进制） = 110（二进制）</span><br><span class="line">0.9（十进制） = 1110011001100......（二进制）</span><br><span class="line">6.9（十进制） = 110.1110011001100......（二进制）</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>将小数点左移（或右移）到第一个有效数字之后；</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">110.1110011001100...... =&gt; 1.101110011001100......（左移2位）</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>填充尾数部分；</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">从小数点后第一位开始，数出23个来，填充到上面float内存结构的尾数部分。默认小数点前面一定有且只有一个1，所以把这个1省略了，这也是为什么定义中尾数是23+1位的原因。</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>填充指数部分；</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">8位表示阶码，无符号是[1,254]，0和255用于表示非规格化情况，有符号位是[-126,127]，引入偏移量以免使用补码带来计算复杂度。</span><br><span class="line">这个指数就是刚才我们把小数点移动的位数，左移为正，右移为负，用来计算指数的偏移量为127，指数应该是2+127=129。</span><br><span class="line">129（十进制） = 10000001（十进制）</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>填充符号位。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>符号位</th>
+<th>指数</th>
+<th>尾数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>10000001</td>
+<td>10111001100110011001100</td>
+</tr>
+</tbody></table>
+<h3 id="不精确的原因"><a href="#不精确的原因" class="headerlink" title="不精确的原因"></a>不精确的原因</h3><ol>
+<li><p>浮点型只有最后一位为5时才能用有限位数的二进制来表示；</p>
+</li>
+<li><p>单精度浮点型尾数部分只能保存23位。</p>
+</li>
+</ol>
+<h2 id="内存中的float64"><a href="#内存中的float64" class="headerlink" title="内存中的float64"></a>内存中的float64</h2><p>float64——双精度浮点类型使用64位（8个字节）存储一个浮点数。</p>
+<p>IEEE754-2008中定义了它的结构：</p>
+<table>
+<thead>
+<tr>
+<th>符号位</th>
+<th>指数</th>
+<th>尾数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>S</td>
+<td>EEEEEEEEEEE</td>
+<td>FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</td>
+</tr>
+<tr>
+<td>1位二进制表示符号: 0,正; 1,负</td>
+<td>11位二进制表示1023偏移量的指数</td>
+<td>52位二进制表示52+1位小数部分</td>
+</tr>
+</tbody></table>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/golang/" rel="tag"># golang</a>
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+          
+            <a href="/tags/float/" rel="tag"># float</a>
+          
+            <a href="/tags/浮点数/" rel="tag"># 浮点数</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/05/Golang深入学习——map/" rel="next" title="Golang深入学习——map">
+                <i class="fa fa-chevron-left"></i> Golang深入学习——map
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -402,6 +524,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -422,8 +551,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -474,6 +612,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#内存中的float32"><span class="nav-number">1.</span> <span class="nav-text">内存中的float32</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子"><span class="nav-number">1.2.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不精确的原因"><span class="nav-number">1.3.</span> <span class="nav-text">不精确的原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存中的float64"><span class="nav-number">2.</span> <span class="nav-text">内存中的float64</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -607,6 +761,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
