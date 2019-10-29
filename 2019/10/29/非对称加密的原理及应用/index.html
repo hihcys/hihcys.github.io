@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="密钥,非对称加密,对称加密,http,https,RSA,算法,">
 
 
 
@@ -79,16 +79,20 @@
 
 
 
-<meta name="description" content="所以表不忘初心，而必果本愿也。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="青青草原">
-<meta property="og:url" content="https://hihcys.github.io/tags/safe/index.html">
+<meta name="description" content="引用来自wiki对于非对称加密的通俗介绍：在现实世界上可作比拟的例子是，一个传统保管箱，开门和关门都是使用同一条钥匙，这是对称加密；而一个公开的邮箱，投递口是任何人都可以寄信进去的，这可视为公钥；而只有信箱主人拥有钥匙可以打开信箱，这就视为私钥，这是非对称加密。RSA是使用最为广泛的非对称加密算法，而http到https的演进就依赖于RSA非对称加密算法。">
+<meta name="keywords" content="密钥,非对称加密,对称加密,http,https,RSA,算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="非对称加密的原理及应用">
+<meta property="og:url" content="https://hihcys.github.io/2019/10/29/非对称加密的原理及应用/index.html">
 <meta property="og:site_name" content="青青草原">
-<meta property="og:description" content="所以表不忘初心，而必果本愿也。">
+<meta property="og:description" content="引用来自wiki对于非对称加密的通俗介绍：在现实世界上可作比拟的例子是，一个传统保管箱，开门和关门都是使用同一条钥匙，这是对称加密；而一个公开的邮箱，投递口是任何人都可以寄信进去的，这可视为公钥；而只有信箱主人拥有钥匙可以打开信箱，这就视为私钥，这是非对称加密。RSA是使用最为广泛的非对称加密算法，而http到https的演进就依赖于RSA非对称加密算法。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://hihcys.github.io/2019/10/29/images/https.jpg">
+<meta property="og:updated_time" content="2019-10-29T10:51:46.731Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="青青草原">
-<meta name="twitter:description" content="所以表不忘初心，而必果本愿也。">
+<meta name="twitter:title" content="非对称加密的原理及应用">
+<meta name="twitter:description" content="引用来自wiki对于非对称加密的通俗介绍：在现实世界上可作比拟的例子是，一个传统保管箱，开门和关门都是使用同一条钥匙，这是对称加密；而一个公开的邮箱，投递口是任何人都可以寄信进去的，这可视为公钥；而只有信箱主人拥有钥匙可以打开信箱，这就视为私钥，这是非对称加密。RSA是使用最为广泛的非对称加密算法，而http到https的演进就依赖于RSA非对称加密算法。">
+<meta name="twitter:image" content="https://hihcys.github.io/2019/10/29/images/https.jpg">
 
 
 
@@ -118,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://hihcys.github.io/tags/safe/">
+  <link rel="canonical" href="https://hihcys.github.io/2019/10/29/非对称加密的原理及应用/">
 
 
 
 
 
-  <title>标签: safe | 青青草原</title>
+  <title>非对称加密的原理及应用 | 青青草原</title>
   
 
 
@@ -143,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -259,52 +263,216 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>safe<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hihcys.github.io/2019/10/29/非对称加密的原理及应用/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hihcys">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="青青草原">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/04/07/数据库安全——SQL注入/" itemprop="url">
-              
-                <span itemprop="name">数据库安全——SQL注入</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">非对称加密的原理及应用</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-04-07T19:44:07+08:00" content="2017-04-07">
-          04-07
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-29T16:29:55+08:00">
+                2019-10-29
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/10/29/非对称加密的原理及应用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/29/非对称加密的原理及应用/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/10/29/非对称加密的原理及应用/" class="leancloud_visitors" data-flag-title="非对称加密的原理及应用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>引用来自wiki对于非对称加密的通俗介绍：在现实世界上可作比拟的例子是，一个传统保管箱，开门和关门都是使用同一条钥匙，这是对称加密；而一个公开的邮箱，投递口是任何人都可以寄信进去的，这可视为公钥；而只有信箱主人拥有钥匙可以打开信箱，这就视为私钥，这是非对称加密。RSA是使用最为广泛的非对称加密算法，而http到https的演进就依赖于RSA非对称加密算法。</p>
+<a id="more"></a>
+
+<h2 id="HTTP到HTTPS的演进"><a href="#HTTP到HTTPS的演进" class="headerlink" title="HTTP到HTTPS的演进"></a>HTTP到HTTPS的演进</h2><h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p>HTTP协议是基于传输层TCP协议的应用层协议，时至今日，它不仅被用来传输超文本文档，还用来传输图片、视频或者向服务器发送如HTML表单这样的信息。HTTP是一个client-server协议：请求通过一个实体被发出，实体也就是用户代理。大多数情况下，这个用户代理都是指浏览器，当然它也可能是任何东西，比如一个爬取网页生成维护搜索引擎索引的机器爬虫。每一个发送到服务器的请求，都会被服务器处理并返回一个消息，也就是response。HTTP是简单的、可扩展的、无状态的、有会话的、面向连接的传输协议。但是HTTP也存在以下问题：</p>
+<ol>
+<li><p>通讯使用明文，可能被窃听。</p>
+</li>
+<li><p>无法证明报文的完整性，可能被篡改。</p>
+</li>
+<li><p>无法验证通讯方的身份，可能被欺骗。</p>
+</li>
+</ol>
+<h3 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h3><p>HTTPS使用TLS/SSL作为传输层安全协议，拥有认证、保密和数据完整性功能。HTTPS 协议的主要功能基本都依赖于 TLS/SSL 协议，TLS/SSL 的功能实现主要依赖于三类基本算法：散列函数 、对称加密和非对称加密，其利用非对称加密实现身份认证和密钥协商，对称加密算法采用协商的密钥对数据加密，基于散列函数验证信息的完整性。</p>
+<p>TLS/SSL = 非对称加密(RSA) + 对称加密(AES) + 散列算法(SHA)。</p>
+<ol>
+<li><p>解决内容可能被窃听的问题——非对称加密+对称加密。</p>
+</li>
+<li><p>解决报文可能遭篡改问题——数字签名。</p>
+</li>
+<li><p>解决通信方身份可能被伪装的问题——数字证书。</p>
+</li>
+</ol>
+<p><img src="../images/https.jpg" alt></p>
+<p>1.Client发起一个HTTPS（比如<a href="https://juejin.im/user/5a9a9cdcf265da238b7d771c）的请求，根据RFC2818的规定，Client知道需要连接Server的443（默认）端口。" target="_blank" rel="noopener">https://juejin.im/user/5a9a9cdcf265da238b7d771c）的请求，根据RFC2818的规定，Client知道需要连接Server的443（默认）端口。</a></p>
+<p>2.Server把事先配置好的公钥证书（public key certificate）返回给客户端。</p>
+<p>3.Client验证公钥证书：比如是否在有效期内，证书的用途是不是匹配Client请求的站点，是不是在CRL吊销列表里面，它的上一级证书是否有效，这是一个递归的过程，直到验证到根证书（操作系统内置的Root证书或者Client内置的Root证书）。如果验证通过则继续，不通过则显示警告信息。</p>
+<p>4.Client使用伪随机数生成器生成加密所使用的对称密钥，然后用证书的公钥加密这个对称密钥，发给Server。</p>
+<p>5.Server使用自己的私钥（private key）解密这个消息，得到对称密钥。至此，Client和Server双方都持有了相同的对称密钥。<br>6.Server使用对称密钥加密“明文内容A”，发送给Client。</p>
+<p>7.Client使用对称密钥解密响应的密文，得到“明文内容A”。</p>
+<p>8.Client再次发起HTTPS的请求，使用对称密钥加密请求的“明文内容B”，然后Server使用对称密钥解密密文，得到“明文内容B”。</p>
+<h3 id="RSA加密算法"><a href="#RSA加密算法" class="headerlink" title="RSA加密算法"></a>RSA加密算法</h3><p>为什么要使用公钥加密私钥解密？</p>
+<ol>
+<li><p>密码学的假设是：一个合格的加密方案，敌手拿到明文c不能恢复明文m。如果颠倒过来，所有人都可以解密，那毫无意义。</p>
+</li>
+<li><p>为了满足密码标准，非对称加密的加密密钥尽可能更安全高效，而私钥尽可能保证安全，防止被破解，这就导致人们设计时公钥加解密比私钥加解密快。所以要用公钥进行加密，私钥进行解密。</p>
+</li>
+</ol>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/密钥/" rel="tag"># 密钥</a>
+          
+            <a href="/tags/非对称加密/" rel="tag"># 非对称加密</a>
+          
+            <a href="/tags/对称加密/" rel="tag"># 对称加密</a>
+          
+            <a href="/tags/http/" rel="tag"># http</a>
+          
+            <a href="/tags/https/" rel="tag"># https</a>
+          
+            <a href="/tags/RSA/" rel="tag"># RSA</a>
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/17/食物寒凉温热属性速查/" rel="next" title="食物寒凉温热属性速查">
+                <i class="fa fa-chevron-left"></i> 食物寒凉温热属性速查
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -312,6 +480,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -332,8 +507,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -384,6 +568,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP到HTTPS的演进"><span class="nav-number">1.</span> <span class="nav-text">HTTP到HTTPS的演进</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP"><span class="nav-number">1.1.</span> <span class="nav-text">HTTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTPS"><span class="nav-number">1.2.</span> <span class="nav-text">HTTPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RSA加密算法"><span class="nav-number">1.3.</span> <span class="nav-text">RSA加密算法</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -517,6 +717,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
