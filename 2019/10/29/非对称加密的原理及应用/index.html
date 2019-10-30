@@ -87,12 +87,12 @@
 <meta property="og:site_name" content="青青草原">
 <meta property="og:description" content="引用来自wiki对于非对称加密的通俗介绍：在现实世界上可作比拟的例子是，一个传统保管箱，开门和关门都是使用同一条钥匙，这是对称加密；而一个公开的邮箱，投递口是任何人都可以寄信进去的，这可视为公钥；而只有信箱主人拥有钥匙可以打开信箱，这就视为私钥，这是非对称加密。RSA是使用最为广泛的非对称加密算法，而http到https的演进就依赖于RSA非对称加密算法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://hihcys.github.io/2019/10/29/images/https.jpg">
-<meta property="og:updated_time" content="2019-10-29T10:51:46.731Z">
+<meta property="og:image" content="https://hihcys.github.io/images/https.jpg">
+<meta property="og:updated_time" content="2019-10-30T01:43:26.572Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="非对称加密的原理及应用">
 <meta name="twitter:description" content="引用来自wiki对于非对称加密的通俗介绍：在现实世界上可作比拟的例子是，一个传统保管箱，开门和关门都是使用同一条钥匙，这是对称加密；而一个公开的邮箱，投递口是任何人都可以寄信进去的，这可视为公钥；而只有信箱主人拥有钥匙可以打开信箱，这就视为私钥，这是非对称加密。RSA是使用最为广泛的非对称加密算法，而http到https的演进就依赖于RSA非对称加密算法。">
-<meta name="twitter:image" content="https://hihcys.github.io/2019/10/29/images/https.jpg">
+<meta name="twitter:image" content="https://hihcys.github.io/images/https.jpg">
 
 
 
@@ -387,7 +387,7 @@
 <li><p>解决通信方身份可能被伪装的问题——数字证书。</p>
 </li>
 </ol>
-<p><img src="../images/https.jpg" alt></p>
+<p><img src="../../../../images/https.jpg" alt></p>
 <p>1.Client发起一个HTTPS（比如<a href="https://juejin.im/user/5a9a9cdcf265da238b7d771c）的请求，根据RFC2818的规定，Client知道需要连接Server的443（默认）端口。" target="_blank" rel="noopener">https://juejin.im/user/5a9a9cdcf265da238b7d771c）的请求，根据RFC2818的规定，Client知道需要连接Server的443（默认）端口。</a></p>
 <p>2.Server把事先配置好的公钥证书（public key certificate）返回给客户端。</p>
 <p>3.Client验证公钥证书：比如是否在有效期内，证书的用途是不是匹配Client请求的站点，是不是在CRL吊销列表里面，它的上一级证书是否有效，这是一个递归的过程，直到验证到根证书（操作系统内置的Root证书或者Client内置的Root证书）。如果验证通过则继续，不通过则显示警告信息。</p>
