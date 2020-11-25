@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="青青草原">
 <meta property="og:description" content="古人言：“学而时习之，不亦说乎”。作为一名普通的工程师，在学校期间有系统的学习软件工程相关的知识，也有一定的实践经验，但时间长了不常用的知识很难回想起来；工作期间也通过网上查阅资料，以及跟同事的交流积累了一定后端相关的技术，但没有对知识进行系统的罗列，难以形成一个可靠的知识体系。现将一些计算机领域的基础知识进行整理，结合实践经验对部分方向进行一定拓展，帮助自己在计算机领域有些成长。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-08-24T10:16:19.607Z">
+<meta property="og:updated_time" content="2020-11-25T09:50:31.021Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机知识图谱">
 <meta name="twitter:description" content="古人言：“学而时习之，不亦说乎”。作为一名普通的工程师，在学校期间有系统的学习软件工程相关的知识，也有一定的实践经验，但时间长了不常用的知识很难回想起来；工作期间也通过网上查阅资料，以及跟同事的交流积累了一定后端相关的技术，但没有对知识进行系统的罗列，难以形成一个可靠的知识体系。现将一些计算机领域的基础知识进行整理，结合实践经验对部分方向进行一定拓展，帮助自己在计算机领域有些成长。">
@@ -366,7 +366,142 @@
         <p>古人言：“学而时习之，不亦说乎”。作为一名普通的工程师，在学校期间有系统的学习软件工程相关的知识，也有一定的实践经验，但时间长了不常用的知识很难回想起来；工作期间也通过网上查阅资料，以及跟同事的交流积累了一定后端相关的技术，但没有对知识进行系统的罗列，难以形成一个可靠的知识体系。现将一些计算机领域的基础知识进行整理，结合实践经验对部分方向进行一定拓展，帮助自己在计算机领域有些成长。</p>
 <a id="more"></a>
 
-<h2 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h2><h2 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h2><h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h2 id="golang"><a href="#golang" class="headerlink" title="golang"></a>golang</h2><h2 id="c"><a href="#c" class="headerlink" title="c++"></a>c++</h2><h2 id="k8s"><a href="#k8s" class="headerlink" title="k8s"></a>k8s</h2><h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><h2 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h2><h2 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h2><h2 id="设计思想"><a href="#设计思想" class="headerlink" title="设计思想"></a>设计思想</h2>
+<h2 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h2><h2 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">do</span><br><span class="line"></span><br><span class="line">  swapped = false</span><br><span class="line"></span><br><span class="line">  for i = 1 to indexOfLastUnsortedElement-1</span><br><span class="line"></span><br><span class="line">    if leftElement &gt; rightElement</span><br><span class="line"></span><br><span class="line">      swap(leftElement, rightElement)</span><br><span class="line"></span><br><span class="line">      swapped = true</span><br><span class="line"></span><br><span class="line">while swapped</span><br></pre></td></tr></table></figure>
+
+<p>最坏时间复杂度 O(n^2)，最好时间复杂度 O(n)，平均时间复杂度 O(n^2)，空间复杂度 O(1)，稳定排序</p>
+<h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">repeat (numOfElements - 1) times</span><br><span class="line"></span><br><span class="line">  set the first unsorted element as the minimum</span><br><span class="line"></span><br><span class="line">  for each of the unsorted elements</span><br><span class="line"></span><br><span class="line">    if element &lt; currentMinimum</span><br><span class="line"></span><br><span class="line">      set element as new minimum</span><br><span class="line"></span><br><span class="line">  swap minimum with first unsorted position</span><br></pre></td></tr></table></figure>
+
+<p>最坏时间复杂度 O(n^2)，最好时间复杂度 O(n)，平均时间复杂度 O(n^2)，空间复杂度 O(1)，不稳定排序</p>
+<h4 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mark first elemenzt as sorted</span><br><span class="line"></span><br><span class="line">for each unsorted element X</span><br><span class="line"></span><br><span class="line">  &apos;extract&apos; the element X</span><br><span class="line"></span><br><span class="line">  for j = lastSortedIndex down to 0</span><br><span class="line"></span><br><span class="line">    if current element j &gt; X</span><br><span class="line"></span><br><span class="line">      move sorted element to the right by 1</span><br><span class="line"></span><br><span class="line">    break loop and insert X here</span><br></pre></td></tr></table></figure>
+
+<p>最坏时间复杂度 O(n^2)，最好时间复杂度 O(n)，平均时间复杂度 O(n^2)，空间复杂度 O(1)，稳定排序</p>
+<h4 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">split each element into partitions of size 1</span><br><span class="line"></span><br><span class="line">recursively merge adjacent partitions</span><br><span class="line"></span><br><span class="line">  for i = leftPartIdx to rightPartIdx</span><br><span class="line"></span><br><span class="line">    if leftPartHeadValue &lt;= rightPartHeadValue</span><br><span class="line"></span><br><span class="line">      copy leftPartHeadValue</span><br><span class="line"></span><br><span class="line">    else: copy rightPartHeadValue</span><br><span class="line"></span><br><span class="line">copy elements back to original array</span><br></pre></td></tr></table></figure>
+
+<p>最坏时间复杂度 O(nlogn)，最好时间复杂度 O(nlogn)，平均时间复杂度 O(nlogn)，空间复杂度 O(n)，稳定排序</p>
+<h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">for each (unsorted) partition</span><br><span class="line"></span><br><span class="line">set first element as pivot</span><br><span class="line"></span><br><span class="line">  storeIndex = pivotIndex + 1</span><br><span class="line"></span><br><span class="line">  for i = pivotIndex + 1 to rightmostIndex</span><br><span class="line"></span><br><span class="line">    if element[i] &lt; element[pivot]</span><br><span class="line"></span><br><span class="line">      swap(i, storeIndex); storeIndex++</span><br><span class="line"></span><br><span class="line">  swap(pivot, storeIndex - 1)</span><br></pre></td></tr></table></figure>
+
+<p>最坏时间复杂度 O(n^2)，最好时间复杂度 O(nlogn)，平均时间复杂度 O(nlogn)，空间复杂度 O(nlogn)，稳定排序</p>
+<h4 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">create key (counting) array</span><br><span class="line"></span><br><span class="line">for each element in list</span><br><span class="line"></span><br><span class="line">  increase the respective counter by 1</span><br><span class="line"></span><br><span class="line">for each counter, starting from smallest key</span><br><span class="line"></span><br><span class="line">  while counter is non-zero</span><br><span class="line"></span><br><span class="line">    restore element to list</span><br><span class="line"></span><br><span class="line">    decrease counter by 1</span><br></pre></td></tr></table></figure>
+
+<p>最坏时间复杂度 O(n)，最好时间复杂度 O(n)，平均时间复杂度 O(n)，空间复杂度 O(k)，稳定排序</p>
+<h4 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">create 10 buckets (queues) for each digit (0 to 9)</span><br><span class="line"></span><br><span class="line">for each digit placing</span><br><span class="line"></span><br><span class="line">  for each element in list</span><br><span class="line"></span><br><span class="line">    move element into respective bucket</span><br><span class="line"></span><br><span class="line">  for each bucket, starting from smallest digit</span><br><span class="line"></span><br><span class="line">    while bucket is non-empty</span><br><span class="line"></span><br><span class="line">      restore element to list</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">slowfastgo to beginningprevious framepausenext framego to end</span><br></pre></td></tr></table></figure>
+
+<p>最坏时间复杂度 O(nm)，最好时间复杂度 O(nm)，平均时间复杂度 O(nm)，空间复杂度 O(m)，稳定排序</p>
+<h4 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h4><p>最坏时间复杂度 O(nlogn)，最好时间复杂度 O(nlogn)，平均时间复杂度 O(nlogn)，空间复杂度 O(nlogn)，稳定排序</p>
+<h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><h4 id="单向链表"><a href="#单向链表" class="headerlink" title="单向链表"></a>单向链表</h4><p>单向链表中每个结点包含两部分，分别是数据域和指针域，上一个结点的指针指向下一结点，依次相连，形成链表。</p>
+<h4 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h4><p>单向链表只有一个方向，结点只有一个后继指针 next 指向后面的结点。而双向链表，顾名思义它支持两个方向，每个结点不止有一个后继指针 next 指向后面的结点，还有一个前驱指针 prev 指向前面的结点。</p>
+<h4 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h4><p>循环链表跟单链表唯一的区别就在尾结点。单向链表的尾结点指针指向空地址，表示这就是最后的结点了，而循环链表的尾结点指针是指向链表的头结点，它像一个环一样首尾相连，所以叫作“循环”链表。</p>
+<h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><h4 id="定址的方法"><a href="#定址的方法" class="headerlink" title="定址的方法"></a>定址的方法</h4><ol>
+<li><p>直接定址法：很容易理解，key=Value+C；这个“C”是常量。Value+C其实就是一个简单的哈希函数。</p>
+</li>
+<li><p>除法取余法：key=value%C</p>
+</li>
+<li><p>数字分析法：这种蛮有意思，比如有一组value1=112233，value2=112633，value3=119033，针对这样的数我们分析数中间两个数比较波动，其他数不变。那么我们取key的值就可以是key1=22,key2=26,key3=90。</p>
+</li>
+<li><p>平方取中法</p>
+</li>
+<li><p>折叠法：举个例子，比如value=135790，要求key是2位数的散列值。那么我们将value变为13+57+90=160，然后去掉高位“1”,此时key=60，哈哈，这就是他们的哈希关系，这样做的目的就是key与每一位value都相关，来做到“散列地址”尽可能分散的目地。</p>
+</li>
+</ol>
+<h4 id="解决冲突的方法"><a href="#解决冲突的方法" class="headerlink" title="解决冲突的方法"></a>解决冲突的方法</h4><ol>
+<li><p>链接地址法：<br>将哈希值相同的数据元素存放在一个链表中，在查找哈希表的过程中，当查找到这个链表时，必须采用线性查找方法。</p>
+</li>
+<li><p>开放定址法：<br>如果两个数据元素的哈希值相同，则在哈希表中为后插入的数据元素另外选择一个表项。当程序查找哈希表时，如果没有在第一个对应的哈希表项中找到符合查找要求的数据元素，程序就会继续往后查找，直到找到一个符合查找要求的数据元素，或者遇到一个空的表项。线性探测带来的最大问题就是冲突的堆积，你把别人预定的坑占了，别人也就要像你一样去找坑。改进的办法有二次方探测法和随机数探测法。开放地址法包括线性探测、二次探测以及双重散列等方法。</p>
+</li>
+</ol>
+<ol start="3">
+<li><p>再散列函数法：<br>发生冲突时就换一个散列函数计算，总会有一个可以把冲突解决掉，它能够使得关键字不产生聚集，但相应地增加了计算的时间。</p>
+</li>
+<li><p>公共溢出区法：<br>其实就是为所有的冲突，额外开辟一块存储空间。如果相对基本表而言，冲突的数据很少的时候，使用这种方法比较合适。</p>
+</li>
+</ol>
+<h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><ol>
+<li>前序遍历（深度优先遍历）</li>
+</ol>
+<p>基本思想：先访问当前结点，再前序遍历左子树，最后再前序遍历右子树即根—左—右</p>
+<ol start="2">
+<li>中序遍历</li>
+</ol>
+<p>基本思想：先中序遍历左子树，然后再访问当前结点，最后再中序遍历右子树即左—根—右。</p>
+<ol start="3">
+<li>后序遍历</li>
+</ol>
+<p>基本思想：先后序遍历左子树，然后再后序遍历右子树，最后再访问当前结点即左—右—根。</p>
+<ol start="4">
+<li>层次遍历（广度优先遍历）</li>
+</ol>
+<p>基本思想：从第一层开始，依此遍历每层，直到结束。</p>
+<h4 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h4><ol>
+<li>构建</li>
+</ol>
+<p>左子树的值小于根节点的值，根节点的值小于右子树的值</p>
+<ol start="2">
+<li>排序</li>
+</ol>
+<p>中序遍历的结果是从小到大排序好的值</p>
+<ol start="3">
+<li>查找</li>
+</ol>
+<p>复杂度小于树的高度</p>
+<ol start="4">
+<li>删除</li>
+</ol>
+<p>寻找右子树的最左子树值替换，左子树的右子树由父树接管为左子树</p>
+<h4 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h4><p>AVL树是左右子树的高度差小于等于1的二叉搜索树（比二叉搜索树更快的查找速度）</p>
+<ol>
+<li><p>构建</p>
+</li>
+<li><p>旋转</p>
+</li>
+</ol>
+<p>左旋转    插入的结点为失衡点的右子树的右子树中</p>
+<p>右旋转    插入的结点为失衡点的左子树的左子树中</p>
+<p>左右旋转  插入的结点为失衡点的左子树的右子树中</p>
+<p>右左旋转  插入的结点在失衡点的右子树的左子树中</p>
+<ol start="3">
+<li><p>查找</p>
+</li>
+<li><p>插入</p>
+</li>
+<li><p>删除</p>
+</li>
+</ol>
+<h4 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h4><p>RB树就是一种以二叉树形式实现了2-3-4树的想法</p>
+<ol>
+<li><p>构建</p>
+</li>
+<li><p>旋转</p>
+</li>
+<li><p>查找</p>
+</li>
+<li><p>插入</p>
+</li>
+<li><p>删除</p>
+</li>
+</ol>
+<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><h4 id="寻找股票买入卖出的最佳时机"><a href="#寻找股票买入卖出的最佳时机" class="headerlink" title="寻找股票买入卖出的最佳时机"></a>寻找股票买入卖出的最佳时机</h4><p>F（n，0） = 0<br>F（n，1）=  max（-price[n-1]，F（n-1，1））<br>F（n，2）=  max（F（n-1，1）+ price[n-1]，F（n-1，2））<br>F（n，3）=  max（F（n-1，2）- price[n-1]，F（n-1，3））<br>F（n，4）=  max（F（n-1，3）+ price[n-1]，F（n-1，4））</p>
+<p>每一个阶段最大收益和上一个阶段的关系：</p>
+<p>F（n，k） = max（F（n-1，k-1）+ price[n-1]，F（n-1，k））</p>
+<h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h3 id="OSI七层网络体系"><a href="#OSI七层网络体系" class="headerlink" title="OSI七层网络体系"></a>OSI七层网络体系</h3><h4 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h4><p>HTTP、FTP、DNS</p>
+<p>为用户的应用进程提供网络通信服务</p>
+<h4 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h4><p>ASCII、SSL</p>
+<p>  数据的编码， 压缩和解压缩， 数据的加密和解密</p>
+<h4 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h4><p>RPC、SSL</p>
+<p>  用户应用程序和网络之间的接口， 负责在网络中的两节点之间的建立、维持和终止通信</p>
+<h4 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h4><p>TCP、UDP</p>
+<p>  源端与目的端之间提供可靠的透明数据传输，传输层协议为不同主机上运行的进程提供逻辑通信</p>
+<h4 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h4><p>IP、路由器</p>
+<p>  将网络地址翻译成对应的物理地址， 并通过路由选择算法选择最适当的路径，网络层协议为不同主机提供逻辑通信</p>
+<h4 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h4><p>MAC、网桥、交换机</p>
+<p>  通过差错控制、流量控制的方法， 使有差错的物理线路变为无差错的数据链路</p>
+<h4 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h4><p>中继器、集线器</p>
+<p>  实现了相邻计算机节点之间比特流的透明传送</p>
+<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><h3 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h3><p>进程是对正在运行中的程序的一个抽象，每个进程都有一个地址空间和多个控制线程。</p>
+<h3 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h3><h3 id="调度算法"><a href="#调度算法" class="headerlink" title="调度算法"></a>调度算法</h3><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h3><h4 id="问题点"><a href="#问题点" class="headerlink" title="问题点"></a>问题点</h4><ol>
+<li>为什么要使用innoDB存储引擎？</li>
+</ol>
+<p>答：InnoDB 锁粒度是行锁，而 MyISAM 是表锁；InnoDB 支持事务，MyISAM 不支持。现在一般都是选用InnoDB了，主要是MyISAM全表锁，读写串行问题，并发效率锁表，效率低MyISAM对于读写密集型应用一般是不会去选用的。</p>
+<h3 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h3><h3 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h3><h3 id="miniIO"><a href="#miniIO" class="headerlink" title="miniIO"></a>miniIO</h3><h2 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h2><h3 id="golang"><a href="#golang" class="headerlink" title="golang"></a>golang</h3><h3 id="c"><a href="#c" class="headerlink" title="c++"></a>c++</h3><h3 id="java"><a href="#java" class="headerlink" title="java"></a>java</h3><h2 id="容器管理"><a href="#容器管理" class="headerlink" title="容器管理"></a>容器管理</h2><h3 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h3><h3 id="k8s"><a href="#k8s" class="headerlink" title="k8s"></a>k8s</h3>
       
     </div>
     
@@ -552,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机组成原理"><span class="nav-number">1.</span> <span class="nav-text">计算机组成原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构与算法"><span class="nav-number">2.</span> <span class="nav-text">数据结构与算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络"><span class="nav-number">3.</span> <span class="nav-text">计算机网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作系统"><span class="nav-number">4.</span> <span class="nav-text">操作系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">5.</span> <span class="nav-text">数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#golang"><span class="nav-number">6.</span> <span class="nav-text">golang</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c"><span class="nav-number">7.</span> <span class="nav-text">c++</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#k8s"><span class="nav-number">8.</span> <span class="nav-text">k8s</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mysql"><span class="nav-number">9.</span> <span class="nav-text">mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mongodb"><span class="nav-number">10.</span> <span class="nav-text">mongodb</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis"><span class="nav-number">11.</span> <span class="nav-text">redis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计思想"><span class="nav-number">12.</span> <span class="nav-text">设计思想</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机组成原理"><span class="nav-number">1.</span> <span class="nav-text">计算机组成原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构与算法"><span class="nav-number">2.</span> <span class="nav-text">数据结构与算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-number">2.1.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#冒泡排序"><span class="nav-number">2.1.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择排序"><span class="nav-number">2.1.2.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插入排序"><span class="nav-number">2.1.3.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#归并排序"><span class="nav-number">2.1.4.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#快速排序"><span class="nav-number">2.1.5.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计数排序"><span class="nav-number">2.1.6.</span> <span class="nav-text">计数排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基数排序"><span class="nav-number">2.1.7.</span> <span class="nav-text">基数排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆排序"><span class="nav-number">2.1.8.</span> <span class="nav-text">堆排序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链表"><span class="nav-number">2.2.</span> <span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单向链表"><span class="nav-number">2.2.1.</span> <span class="nav-text">单向链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#双向链表"><span class="nav-number">2.2.2.</span> <span class="nav-text">双向链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#循环链表"><span class="nav-number">2.2.3.</span> <span class="nav-text">循环链表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哈希表"><span class="nav-number">2.3.</span> <span class="nav-text">哈希表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定址的方法"><span class="nav-number">2.3.1.</span> <span class="nav-text">定址的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决冲突的方法"><span class="nav-number">2.3.2.</span> <span class="nav-text">解决冲突的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#树"><span class="nav-number">2.4.</span> <span class="nav-text">树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历"><span class="nav-number">2.4.1.</span> <span class="nav-text">遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉搜索树"><span class="nav-number">2.4.2.</span> <span class="nav-text">二叉搜索树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#平衡二叉树"><span class="nav-number">2.4.3.</span> <span class="nav-text">平衡二叉树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#红黑树"><span class="nav-number">2.4.4.</span> <span class="nav-text">红黑树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图"><span class="nav-number">2.5.</span> <span class="nav-text">图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态规划"><span class="nav-number">2.6.</span> <span class="nav-text">动态规划</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#寻找股票买入卖出的最佳时机"><span class="nav-number">2.6.1.</span> <span class="nav-text">寻找股票买入卖出的最佳时机</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络"><span class="nav-number">3.</span> <span class="nav-text">计算机网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI七层网络体系"><span class="nav-number">3.1.</span> <span class="nav-text">OSI七层网络体系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用层"><span class="nav-number">3.1.1.</span> <span class="nav-text">应用层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表示层"><span class="nav-number">3.1.2.</span> <span class="nav-text">表示层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#会话层"><span class="nav-number">3.1.3.</span> <span class="nav-text">会话层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传输层"><span class="nav-number">3.1.4.</span> <span class="nav-text">传输层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络层"><span class="nav-number">3.1.5.</span> <span class="nav-text">网络层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据链路层"><span class="nav-number">3.1.6.</span> <span class="nav-text">数据链路层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#物理层"><span class="nav-number">3.1.7.</span> <span class="nav-text">物理层</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作系统"><span class="nav-number">4.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进程和线程"><span class="nav-number">4.1.</span> <span class="nav-text">进程和线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程间通信"><span class="nav-number">4.2.</span> <span class="nav-text">进程间通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调度算法"><span class="nav-number">4.3.</span> <span class="nav-text">调度算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">5.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql"><span class="nav-number">5.1.</span> <span class="nav-text">mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题点"><span class="nav-number">5.1.1.</span> <span class="nav-text">问题点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mongodb"><span class="nav-number">5.2.</span> <span class="nav-text">mongodb</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis"><span class="nav-number">5.3.</span> <span class="nav-text">redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#miniIO"><span class="nav-number">5.4.</span> <span class="nav-text">miniIO</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编程语言"><span class="nav-number">6.</span> <span class="nav-text">编程语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#golang"><span class="nav-number">6.1.</span> <span class="nav-text">golang</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c"><span class="nav-number">6.2.</span> <span class="nav-text">c++</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java"><span class="nav-number">6.3.</span> <span class="nav-text">java</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器管理"><span class="nav-number">7.</span> <span class="nav-text">容器管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#docker"><span class="nav-number">7.1.</span> <span class="nav-text">docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k8s"><span class="nav-number">7.2.</span> <span class="nav-text">k8s</span></a></li></ol></li></ol></div>
             
 
           </div>
