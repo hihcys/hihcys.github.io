@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="golang,计算机组成原理,数据结构与算法,计算机网络,操作系统,数据库,c++,k8s,mysql,mongodb,redis,设计思想,">
+  <meta name="keywords" content="计算机组成原理,容器管理,消息系统,深度学习框架,安全,服务治理,">
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="古人言：“学而时习之，不亦说乎”。作为一名普通的工程师，在学校期间有系统的学习软件工程相关的知识，也有一定的实践经验，但时间长了不常用的知识很难回想起来；工作期间也通过网上查阅资料，以及跟同事的交流积累了一定后端相关的技术，但没有对知识进行系统的罗列，难以形成一个可靠的知识体系。现将一些计算机领域的基础知识进行整理，结合实践经验对部分方向进行一定拓展，帮助自己在计算机领域有些成长。">
-<meta name="keywords" content="golang,计算机组成原理,数据结构与算法,计算机网络,操作系统,数据库,c++,k8s,mysql,mongodb,redis,设计思想">
+<meta name="keywords" content="计算机组成原理,容器管理,消息系统,深度学习框架,安全,服务治理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机知识图谱">
 <meta property="og:url" content="https://hihcys.github.io/2020/08/24/计算机知识图谱/index.html">
 <meta property="og:site_name" content="青青草原">
 <meta property="og:description" content="古人言：“学而时习之，不亦说乎”。作为一名普通的工程师，在学校期间有系统的学习软件工程相关的知识，也有一定的实践经验，但时间长了不常用的知识很难回想起来；工作期间也通过网上查阅资料，以及跟同事的交流积累了一定后端相关的技术，但没有对知识进行系统的罗列，难以形成一个可靠的知识体系。现将一些计算机领域的基础知识进行整理，结合实践经验对部分方向进行一定拓展，帮助自己在计算机领域有些成长。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-12-25T09:22:03.049Z">
+<meta property="og:updated_time" content="2021-02-02T01:40:52.927Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机知识图谱">
 <meta name="twitter:description" content="古人言：“学而时习之，不亦说乎”。作为一名普通的工程师，在学校期间有系统的学习软件工程相关的知识，也有一定的实践经验，但时间长了不常用的知识很难回想起来；工作期间也通过网上查阅资料，以及跟同事的交流积累了一定后端相关的技术，但没有对知识进行系统的罗列，难以形成一个可靠的知识体系。现将一些计算机领域的基础知识进行整理，结合实践经验对部分方向进行一定拓展，帮助自己在计算机领域有些成长。">
@@ -366,398 +366,7 @@
         <p>古人言：“学而时习之，不亦说乎”。作为一名普通的工程师，在学校期间有系统的学习软件工程相关的知识，也有一定的实践经验，但时间长了不常用的知识很难回想起来；工作期间也通过网上查阅资料，以及跟同事的交流积累了一定后端相关的技术，但没有对知识进行系统的罗列，难以形成一个可靠的知识体系。现将一些计算机领域的基础知识进行整理，结合实践经验对部分方向进行一定拓展，帮助自己在计算机领域有些成长。</p>
 <a id="more"></a>
 
-<h2 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h2><h2 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h2><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">do</span><br><span class="line"></span><br><span class="line">  swapped = false</span><br><span class="line"></span><br><span class="line">  for i = 1 to indexOfLastUnsortedElement-1</span><br><span class="line"></span><br><span class="line">    if leftElement &gt; rightElement</span><br><span class="line"></span><br><span class="line">      swap(leftElement, rightElement)</span><br><span class="line"></span><br><span class="line">      swapped = true</span><br><span class="line"></span><br><span class="line">while swapped</span><br></pre></td></tr></table></figure>
-
-<p>最坏时间复杂度 O(n^2)，最好时间复杂度 O(n)，平均时间复杂度 O(n^2)，空间复杂度 O(1)，稳定排序</p>
-<h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">repeat (numOfElements - 1) times</span><br><span class="line"></span><br><span class="line">  set the first unsorted element as the minimum</span><br><span class="line"></span><br><span class="line">  for each of the unsorted elements</span><br><span class="line"></span><br><span class="line">    if element &lt; currentMinimum</span><br><span class="line"></span><br><span class="line">      set element as new minimum</span><br><span class="line"></span><br><span class="line">  swap minimum with first unsorted position</span><br></pre></td></tr></table></figure>
-
-<p>最坏时间复杂度 O(n^2)，最好时间复杂度 O(n)，平均时间复杂度 O(n^2)，空间复杂度 O(1)，不稳定排序</p>
-<h4 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mark first elemenzt as sorted</span><br><span class="line"></span><br><span class="line">for each unsorted element X</span><br><span class="line"></span><br><span class="line">  &apos;extract&apos; the element X</span><br><span class="line"></span><br><span class="line">  for j = lastSortedIndex down to 0</span><br><span class="line"></span><br><span class="line">    if current element j &gt; X</span><br><span class="line"></span><br><span class="line">      move sorted element to the right by 1</span><br><span class="line"></span><br><span class="line">    break loop and insert X here</span><br></pre></td></tr></table></figure>
-
-<p>最坏时间复杂度 O(n^2)，最好时间复杂度 O(n)，平均时间复杂度 O(n^2)，空间复杂度 O(1)，稳定排序</p>
-<h4 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">split each element into partitions of size 1</span><br><span class="line"></span><br><span class="line">recursively merge adjacent partitions</span><br><span class="line"></span><br><span class="line">  for i = leftPartIdx to rightPartIdx</span><br><span class="line"></span><br><span class="line">    if leftPartHeadValue &lt;= rightPartHeadValue</span><br><span class="line"></span><br><span class="line">      copy leftPartHeadValue</span><br><span class="line"></span><br><span class="line">    else: copy rightPartHeadValue</span><br><span class="line"></span><br><span class="line">copy elements back to original array</span><br></pre></td></tr></table></figure>
-
-<p>最坏时间复杂度 O(nlogn)，最好时间复杂度 O(nlogn)，平均时间复杂度 O(nlogn)，空间复杂度 O(n)，稳定排序</p>
-<h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">for each (unsorted) partition</span><br><span class="line"></span><br><span class="line">set first element as pivot</span><br><span class="line"></span><br><span class="line">  storeIndex = pivotIndex + 1</span><br><span class="line"></span><br><span class="line">  for i = pivotIndex + 1 to rightmostIndex</span><br><span class="line"></span><br><span class="line">    if element[i] &lt; element[pivot]</span><br><span class="line"></span><br><span class="line">      swap(i, storeIndex); storeIndex++</span><br><span class="line"></span><br><span class="line">  swap(pivot, storeIndex - 1)</span><br></pre></td></tr></table></figure>
-
-<p>最坏时间复杂度 O(n^2)，最好时间复杂度 O(nlogn)，平均时间复杂度 O(nlogn)，空间复杂度 O(nlogn)，稳定排序</p>
-<h4 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">create key (counting) array</span><br><span class="line"></span><br><span class="line">for each element in list</span><br><span class="line"></span><br><span class="line">  increase the respective counter by 1</span><br><span class="line"></span><br><span class="line">for each counter, starting from smallest key</span><br><span class="line"></span><br><span class="line">  while counter is non-zero</span><br><span class="line"></span><br><span class="line">    restore element to list</span><br><span class="line"></span><br><span class="line">    decrease counter by 1</span><br></pre></td></tr></table></figure>
-
-<p>最坏时间复杂度 O(n)，最好时间复杂度 O(n)，平均时间复杂度 O(n)，空间复杂度 O(k)，稳定排序</p>
-<h4 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">create 10 buckets (queues) for each digit (0 to 9)</span><br><span class="line"></span><br><span class="line">for each digit placing</span><br><span class="line"></span><br><span class="line">  for each element in list</span><br><span class="line"></span><br><span class="line">    move element into respective bucket</span><br><span class="line"></span><br><span class="line">  for each bucket, starting from smallest digit</span><br><span class="line"></span><br><span class="line">    while bucket is non-empty</span><br><span class="line"></span><br><span class="line">      restore element to list</span><br><span class="line"></span><br><span class="line">&gt;</span><br><span class="line">slowfastgo to beginningprevious framepausenext framego to end</span><br></pre></td></tr></table></figure>
-
-<p>最坏时间复杂度 O(nm)，最好时间复杂度 O(nm)，平均时间复杂度 O(nm)，空间复杂度 O(m)，稳定排序</p>
-<h4 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h4><p>最坏时间复杂度 O(nlogn)，最好时间复杂度 O(nlogn)，平均时间复杂度 O(nlogn)，空间复杂度 O(nlogn)，稳定排序</p>
-<h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><h4 id="单向链表"><a href="#单向链表" class="headerlink" title="单向链表"></a>单向链表</h4><p>单向链表中每个结点包含两部分，分别是数据域和指针域，上一个结点的指针指向下一结点，依次相连，形成链表。</p>
-<h5 id="1-链表反转"><a href="#1-链表反转" class="headerlink" title="1. 链表反转"></a>1. 链表反转</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">func (head *Node) ReverseNode() *Node &#123;</span><br><span class="line">	if head == nil || head.Next == nil &#123;</span><br><span class="line">		return head</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	var preNode, nowNode *Node</span><br><span class="line">	preNode = head</span><br><span class="line">	nowNode = head.Next</span><br><span class="line">	for &#123;</span><br><span class="line">		sufNode := nowNode.Next</span><br><span class="line">		nowNode.Next = preNode</span><br><span class="line">		if sufNode == nil &#123;</span><br><span class="line">			break</span><br><span class="line">		&#125;</span><br><span class="line">		preNode = nowNode</span><br><span class="line">		nowNode = sufNode</span><br><span class="line">	&#125;</span><br><span class="line">	head.Next = nil</span><br><span class="line">	head = nowNode</span><br><span class="line"></span><br><span class="line">	return nowNode</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-删除排序链表中的重复元素"><a href="#2-删除排序链表中的重复元素" class="headerlink" title="2. 删除排序链表中的重复元素"></a>2. 删除排序链表中的重复元素</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h4><p>单向链表只有一个方向，结点只有一个后继指针 next 指向后面的结点。而双向链表，顾名思义它支持两个方向，每个结点不止有一个后继指针 next 指向后面的结点，还有一个前驱指针 prev 指向前面的结点。</p>
-<h4 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h4><p>循环链表跟单链表唯一的区别就在尾结点。单向链表的尾结点指针指向空地址，表示这就是最后的结点了，而循环链表的尾结点指针是指向链表的头结点，它像一个环一样首尾相连，所以叫作“循环”链表。</p>
-<h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><h4 id="定址的方法"><a href="#定址的方法" class="headerlink" title="定址的方法"></a>定址的方法</h4><ol>
-<li><p>直接定址法：很容易理解，key=Value+C；这个“C”是常量。Value+C其实就是一个简单的哈希函数。</p>
-</li>
-<li><p>除法取余法：key=value%C</p>
-</li>
-<li><p>数字分析法：这种蛮有意思，比如有一组value1=112233，value2=112633，value3=119033，针对这样的数我们分析数中间两个数比较波动，其他数不变。那么我们取key的值就可以是key1=22,key2=26,key3=90。</p>
-</li>
-<li><p>平方取中法</p>
-</li>
-<li><p>折叠法：举个例子，比如value=135790，要求key是2位数的散列值。那么我们将value变为13+57+90=160，然后去掉高位“1”,此时key=60，哈哈，这就是他们的哈希关系，这样做的目的就是key与每一位value都相关，来做到“散列地址”尽可能分散的目地。</p>
-</li>
-</ol>
-<h4 id="解决冲突的方法"><a href="#解决冲突的方法" class="headerlink" title="解决冲突的方法"></a>解决冲突的方法</h4><ol>
-<li><p>链接地址法：<br>将哈希值相同的数据元素存放在一个链表中，在查找哈希表的过程中，当查找到这个链表时，必须采用线性查找方法。</p>
-</li>
-<li><p>开放定址法：<br>如果两个数据元素的哈希值相同，则在哈希表中为后插入的数据元素另外选择一个表项。当程序查找哈希表时，如果没有在第一个对应的哈希表项中找到符合查找要求的数据元素，程序就会继续往后查找，直到找到一个符合查找要求的数据元素，或者遇到一个空的表项。线性探测带来的最大问题就是冲突的堆积，你把别人预定的坑占了，别人也就要像你一样去找坑。改进的办法有二次方探测法和随机数探测法。开放地址法包括线性探测、二次探测以及双重散列等方法。</p>
-</li>
-</ol>
-<ol start="3">
-<li><p>再散列函数法：<br>发生冲突时就换一个散列函数计算，总会有一个可以把冲突解决掉，它能够使得关键字不产生聚集，但相应地增加了计算的时间。</p>
-</li>
-<li><p>公共溢出区法：<br>其实就是为所有的冲突，额外开辟一块存储空间。如果相对基本表而言，冲突的数据很少的时候，使用这种方法比较合适。</p>
-</li>
-</ol>
-<h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><ol>
-<li>前序遍历（深度优先遍历）</li>
-</ol>
-<p>基本思想：先访问当前结点，再前序遍历左子树，最后再前序遍历右子树即根—左—右</p>
-<ol start="2">
-<li>中序遍历</li>
-</ol>
-<p>基本思想：先中序遍历左子树，然后再访问当前结点，最后再中序遍历右子树即左—根—右。</p>
-<ol start="3">
-<li>后序遍历</li>
-</ol>
-<p>基本思想：先后序遍历左子树，然后再后序遍历右子树，最后再访问当前结点即左—右—根。</p>
-<ol start="4">
-<li>层次遍历（广度优先遍历）</li>
-</ol>
-<p>基本思想：从第一层开始，依此遍历每层，直到结束。</p>
-<h4 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h4><ol>
-<li>构建</li>
-</ol>
-<p>左子树的值小于根节点的值，根节点的值小于右子树的值</p>
-<ol start="2">
-<li>排序</li>
-</ol>
-<p>中序遍历的结果是从小到大排序好的值</p>
-<ol start="3">
-<li>查找</li>
-</ol>
-<p>复杂度小于树的高度</p>
-<ol start="4">
-<li>删除</li>
-</ol>
-<p>寻找右子树的最左子树值替换，左子树的右子树由父树接管为左子树</p>
-<h4 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h4><p>AVL树是左右子树的高度差小于等于1的二叉搜索树（比二叉搜索树更快的查找速度）</p>
-<ol>
-<li><p>构建</p>
-</li>
-<li><p>旋转</p>
-</li>
-</ol>
-<p>左旋转    插入的结点为失衡点的右子树的右子树中</p>
-<p>右旋转    插入的结点为失衡点的左子树的左子树中</p>
-<p>左右旋转  插入的结点为失衡点的左子树的右子树中</p>
-<p>右左旋转  插入的结点在失衡点的右子树的左子树中</p>
-<ol start="3">
-<li><p>查找</p>
-</li>
-<li><p>插入</p>
-</li>
-<li><p>删除</p>
-</li>
-</ol>
-<h4 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h4><p>RB树就是一种以二叉树形式实现了2-3-4树的想法</p>
-<ol>
-<li><p>构建</p>
-</li>
-<li><p>旋转</p>
-</li>
-<li><p>查找</p>
-</li>
-<li><p>插入</p>
-</li>
-<li><p>删除</p>
-</li>
-</ol>
-<h4 id="trie树"><a href="#trie树" class="headerlink" title="trie树"></a>trie树</h4><p>又称前缀树（prefix tree）、字典树</p>
-<ol>
-<li><p>根节点不包含字符，除根节点外每一个节点都只包含一个字符。</p>
-</li>
-<li><p>从根节点到某一节点，路径上经过的字符连接起来，为该节点对应的字符串。</p>
-</li>
-<li><p>每个节点的所有子节点包含的字符都不相同。</p>
-</li>
-</ol>
-<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><h4 id="寻找股票买入卖出的最佳时机"><a href="#寻找股票买入卖出的最佳时机" class="headerlink" title="寻找股票买入卖出的最佳时机"></a>寻找股票买入卖出的最佳时机</h4><p>F（n，0） = 0<br>F（n，1）=  max（-price[n-1]，F（n-1，1））<br>F（n，2）=  max（F（n-1，1）+ price[n-1]，F（n-1，2））<br>F（n，3）=  max（F（n-1，2）- price[n-1]，F（n-1，3））<br>F（n，4）=  max（F（n-1，3）+ price[n-1]，F（n-1，4））</p>
-<p>每一个阶段最大收益和上一个阶段的关系：</p>
-<p>F（n，k） = max（F（n-1，k-1）+ price[n-1]，F（n-1，k））</p>
-<h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h3 id="OSI七层网络体系"><a href="#OSI七层网络体系" class="headerlink" title="OSI七层网络体系"></a>OSI七层网络体系</h3><h4 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h4><p>HTTP、FTP、DNS</p>
-<p>为用户的应用进程提供网络通信服务</p>
-<h4 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h4><p>ASCII、SSL</p>
-<p>  数据的编码， 压缩和解压缩， 数据的加密和解密</p>
-<h4 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h4><p>RPC、SSL</p>
-<p>  用户应用程序和网络之间的接口， 负责在网络中的两节点之间的建立、维持和终止通信</p>
-<h4 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h4><p>TCP、UDP</p>
-<p>  源端与目的端之间提供可靠的透明数据传输，传输层协议为不同主机上运行的进程提供逻辑通信</p>
-<h4 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h4><p>IP、路由器</p>
-<p>  将网络地址翻译成对应的物理地址， 并通过路由选择算法选择最适当的路径，网络层协议为不同主机提供逻辑通信</p>
-<h4 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h4><p>MAC、网桥、交换机</p>
-<p>  通过差错控制、流量控制的方法， 使有差错的物理线路变为无差错的数据链路</p>
-<h4 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h4><p>中继器、集线器</p>
-<p>  实现了相邻计算机节点之间比特流的透明传送</p>
-<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><p>大部分计算机有两种运行模式：<code>内核态</code>和<code>用户态</code>，软件中最基础的部分是操作系统，它运行在<code>内核态</code>中。操作系统具有硬件的访问权，可以执行机器能够运行的任何指令。软件的其余部分运行在<code>用户态</code>下。</p>
-<h3 id="计算机硬件"><a href="#计算机硬件" class="headerlink" title="计算机硬件"></a>计算机硬件</h3><p>包含了 5 个重要的组成部分：运算器、控制器、存储器、输入设备、输出设备。</p>
-<h3 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h3><p>进程是对正在运行中的程序的一个抽象，每个进程都有一个地址空间和多个控制线程。</p>
-<h3 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h3><h4 id="信号"><a href="#信号" class="headerlink" title="信号"></a>信号</h4><h4 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h4><h4 id="共享内存"><a href="#共享内存" class="headerlink" title="共享内存"></a>共享内存</h4><h4 id="先入先出队列"><a href="#先入先出队列" class="headerlink" title="先入先出队列"></a>先入先出队列</h4><h4 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h4><h4 id="套接字"><a href="#套接字" class="headerlink" title="套接字"></a>套接字</h4><h3 id="调度算法"><a href="#调度算法" class="headerlink" title="调度算法"></a>调度算法</h3><h4 id="先来先服务"><a href="#先来先服务" class="headerlink" title="先来先服务"></a>先来先服务</h4><h4 id="最短作业优先"><a href="#最短作业优先" class="headerlink" title="最短作业优先"></a>最短作业优先</h4><h4 id="最短剩余时间优先"><a href="#最短剩余时间优先" class="headerlink" title="最短剩余时间优先"></a>最短剩余时间优先</h4><h4 id="轮询调度"><a href="#轮询调度" class="headerlink" title="轮询调度"></a>轮询调度</h4><h4 id="优先级调度"><a href="#优先级调度" class="headerlink" title="优先级调度"></a>优先级调度</h4><h4 id="多级队列"><a href="#多级队列" class="headerlink" title="多级队列"></a>多级队列</h4><h4 id="最短进程优先"><a href="#最短进程优先" class="headerlink" title="最短进程优先"></a>最短进程优先</h4><h4 id="保证调度"><a href="#保证调度" class="headerlink" title="保证调度"></a>保证调度</h4><h4 id="彩票调度"><a href="#彩票调度" class="headerlink" title="彩票调度"></a>彩票调度</h4><h4 id="公平分享调度"><a href="#公平分享调度" class="headerlink" title="公平分享调度"></a>公平分享调度</h4><h3 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h3><h4 id="最优页面置换算法"><a href="#最优页面置换算法" class="headerlink" title="最优页面置换算法"></a>最优页面置换算法</h4><h3 id="协程和线程的区别"><a href="#协程和线程的区别" class="headerlink" title="协程和线程的区别"></a>协程和线程的区别</h3><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h3><h4 id="问题点"><a href="#问题点" class="headerlink" title="问题点"></a>问题点</h4><h4 id="InnoDB"><a href="#InnoDB" class="headerlink" title="InnoDB"></a>InnoDB</h4><ol>
-<li>为什么要使用innoDB存储引擎？</li>
-</ol>
-<p>答：InnoDB 锁粒度是行锁，而 MyISAM 是表锁；InnoDB 支持事务，MyISAM 不支持。现在一般都是选用InnoDB了，主要是MyISAM全表锁，读写串行问题，并发效率锁表，效率低MyISAM对于读写密集型应用一般是不会去选用的。</p>
-<ol start="2">
-<li>InnoDB四范式？</li>
-</ol>
-<p>答：</p>
-<h4 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h4><h3 id="mongodb"><a href="#mongodb" class="headerlink" title="mongodb"></a>mongodb</h3><h4 id="事务-1"><a href="#事务-1" class="headerlink" title="事务"></a>事务</h4><p>MongoDB 4.0 引入的事务功能，支持多文档ACID特性</p>
-<h3 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h3><h4 id="命令和数据类型"><a href="#命令和数据类型" class="headerlink" title="命令和数据类型"></a>命令和数据类型</h4><h5 id="1-字符串"><a href="#1-字符串" class="headerlink" title="1.字符串"></a>1.字符串</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET [key] [value] [EX seconds | PX milliseconds] NX|XX</span><br></pre></td></tr></table></figure>
-
-<p>将键key的值设置为value，SET覆盖旧值（无视数据类型）</p>
-<p>EX/PX设置过期时间（秒/毫秒），覆盖TTL</p>
-<p>NX/XX检查后设置（不存在才设置/存在才设置）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SETNX [key] [value]</span><br></pre></td></tr></table></figure>
-
-<p>只在键key不存在的情况下，将键key的值设置为value</p>
-<p>等效于 SET [key] [value] NX</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SETEX [key] [seconds] [value]</span><br></pre></td></tr></table></figure>
-
-<p>将键 key 的值设置为 value ， 并将键 key 的生存时间设置为 seconds 秒钟。</p>
-<p>等效于 SET [Key] [value] EX [seconds]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PSETEX [key] [milliseconds] [value]</span><br></pre></td></tr></table></figure>
-
-<p>将键 key 的值设置为 value ， 并将键 key 的生存时间设置为 milliseconds 秒钟。</p>
-<p>等效 SET [Key] [value] PX [seconds]</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET [key]</span><br></pre></td></tr></table></figure>
-
-<p>返回与键 key 相关联的字符串值</p>
-<p>如果键 key 的值并非字符串类型， 那么返回一个错误， 因为 GET 命令只能用于字符串值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GETSET [key] [value]</span><br></pre></td></tr></table></figure>
-
-<p>将键 key 的值设为 value ， 并返回键 key 在被设置之前的旧值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">STRLEN [key]</span><br></pre></td></tr></table></figure>
-
-<p>返回字符串值的长度</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">APPEND [key] [value]</span><br></pre></td></tr></table></figure>
-
-<p>如果键 key 已经存在并且它的值是一个字符串， APPEND 命令将把 value 追加到键 key 现有值的末尾。</p>
-<p>如果 key 不存在， APPEND 就简单地将键 key 的值设为 value ， 就像执行 SET key value 一样。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SETRANGE [key] [offset] [value]</span><br></pre></td></tr></table></figure>
-
-<p>从偏移量 offset 开始， 用 value 参数覆写(overwrite)键 key 储存的字符串值</p>
-<p>那么原字符和偏移量之间的空白将用零字节(zerobytes, “\x00” )进行填充</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GETRANGE [key] [start] [end]</span><br></pre></td></tr></table></figure>
-
-<p>返回键 key 储存的字符串值的指定部分， 字符串的截取范围由 start 和 end 两个偏移量决定 (包括 start 和 end 在内)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INCR key</span><br></pre></td></tr></table></figure>
-
-<p>为键 key 储存的数字值加上一；如果键 key 不存在， 那么它的值会先被初始化为 0 ， 然后再执行 INCR 命令；如果键 key 储存的值不能被解释为数字， 那么 INCR 命令将返回一个错误。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INCRBY [key] [increment]</span><br></pre></td></tr></table></figure>
-
-<p>为键 key 储存的数字值加上增量 increment ；其它类似上面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INCRBYFLOAT key increment</span><br></pre></td></tr></table></figure>
-
-<p>为键 key 储存的值加上浮点数增量 increment；其它类似上面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DECR key</span><br></pre></td></tr></table></figure>
-
-<p>为键 key 储存的数字值减去一；其它类似上面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DECRBY key decrement</span><br></pre></td></tr></table></figure>
-
-<p>将键 key 储存的整数值减去减量 decrement；其它类似上面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MSET [key] [value] [key value …]</span><br></pre></td></tr></table></figure>
-
-<p>同时为多个键设置值</p>
-<p>MSET 是一个原子性(atomic)操作， 所有给定键都会在同一时间内被设置， 不会出现某些键被设置了但是另一些键没有被设置的情况。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MSETNX [key] [value] [key value …]</span><br></pre></td></tr></table></figure>
-
-<p>当且仅当所有给定键都不存在时， 为所有给定键设置值</p>
-<p>MSETNX 是一个原子性(atomic)操作， 所有给定键要么就全部都被设置， 要么就全部都不设置， 不可能出现第三种状态。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MGET key [key …]</span><br></pre></td></tr></table></figure>
-
-<p>返回给定的一个或多个字符串键的值</p>
-<h5 id="2-哈希表"><a href="#2-哈希表" class="headerlink" title="2.哈希表"></a>2.哈希表</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HSET [key] [field] [value] [field value …]</span><br></pre></td></tr></table></figure>
-
-<p>将哈希表 key 中域 field 的值设置为 value；返回不存在且设置成功的数量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HSETNX [key] [field] [value]</span><br></pre></td></tr></table></figure>
-
-<p>当且仅当域 field 尚未存在于哈希表的情况下， 将它的值设置为 value</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HGET [key] [field]</span><br></pre></td></tr></table></figure>
-
-<p>返回哈希表中给定域的值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HEXISTS [key] [field]</span><br></pre></td></tr></table></figure>
-
-<p>在给定域存在时返回 1 ， 在给定域不存在时返回 0</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HDEL [key] [field] [field …]</span><br></pre></td></tr></table></figure>
-
-<p>删除哈希表 key 中的一个或多个指定域，不存在的域将被忽略</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HLEN [key]</span><br></pre></td></tr></table></figure>
-
-<p>返回哈希表 key 中域的数量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HSTRLEN [key] [field]</span><br></pre></td></tr></table></figure>
-
-<p>返回哈希表 key 中， 与给定域 field 相关联的值的字符串长度（string length）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HINCRBY [key] [field] [increment]</span><br></pre></td></tr></table></figure>
-
-<p>为哈希表 key 中的域 field 的值加上增量 increment</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HINCRBYFLOAT [key] [field] [increment]</span><br></pre></td></tr></table></figure>
-
-<p>为哈希表 key 中的域 field 加上浮点数增量 increment</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HMSET [key] [field] [field value …]</span><br></pre></td></tr></table></figure>
-
-<p>同时将多个 field-value (域-值)对设置到哈希表 key 中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HMGET [key] [field] [field …]</span><br></pre></td></tr></table></figure>
-
-<p>返回哈希表 key 中，一个或多个给定域的值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEYS [key]</span><br></pre></td></tr></table></figure>
-
-<p>返回哈希表 key 中的所有域</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HVALS [key]</span><br></pre></td></tr></table></figure>
-
-<p>返回哈希表 key 中所有域的值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HGETALL [key]</span><br></pre></td></tr></table></figure>
-
-<p>返回哈希表 key 中，所有的域和值；在返回值里，紧跟每个域名(field name)之后是域的值(value)，所以返回值的长度是哈希表大小的两倍。</p>
-<h5 id="3-列表"><a href="#3-列表" class="headerlink" title="3.列表"></a>3.列表</h5><p>底层数据结构为双端链表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LPUSH [key] [value] [value …]</span><br></pre></td></tr></table></figure>
-
-<p>将一个或多个值 value 插入到列表 key 的表头；如果有多个 value 值，那么各个 value 值按从左到右的顺序依次插入到表头</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LPUSHX [key] [value]</span><br></pre></td></tr></table></figure>
-
-<p>将值 value 插入到列表 key 的表头，当且仅当 key 存在并且是一个列表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RPUSH [key] [value] [value …]</span><br></pre></td></tr></table></figure>
-
-<p>将一个或多个值 value 插入到列表 key 的表尾(最右边)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RPUSHX [key] [value]</span><br></pre></td></tr></table></figure>
-
-<p>将值 value 插入到列表 key 的表尾，当且仅当 key 存在并且是一个列表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LPOP [key]</span><br></pre></td></tr></table></figure>
-
-<p>移除并返回列表 key 的头元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RPOP [key]</span><br></pre></td></tr></table></figure>
-
-<p>移除并返回列表 key 的尾元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RPOPLPUSH [source] [destination]</span><br></pre></td></tr></table></figure>
-
-<p>将列表 source 中的最后一个元素(尾元素)弹出，并返回给客户端；将 source 弹出的元素插入到列表 destination ，作为 destination 列表的的头元素。</p>
-<p>如果 source 和 destination 相同，则列表中的表尾元素被移动到表头，并返回该元素，可以把这种特殊情况视作列表的旋转(rotation)操作。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LREM [key] [count] [value]</span><br></pre></td></tr></table></figure>
-
-<p>根据参数 count 的值，移除列表中与参数 value 相等的元素。count &gt; 0 : 从表头开始向表尾搜索，移除与 value 相等的元素，数量为 count ；count &lt; 0 : 从表尾开始向表头搜索，移除与 value 相等的元素，数量为 count 的绝对值；count = 0 : 移除表中所有与 value 相等的值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LLEN [key]</span><br></pre></td></tr></table></figure>
-
-<p>返回列表 key 的长度</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LINDEX [key] [index]</span><br></pre></td></tr></table></figure>
-
-<p>返回列表 key 中，下标为 index 的元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LINSERT [key] [BEFORE|AFTER] [pivot] [value]</span><br></pre></td></tr></table></figure>
-
-<p>将值 value 插入到列表 key 当中，位于值 pivot 之前或之后</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LSET [key] [index] [value]</span><br></pre></td></tr></table></figure>
-
-<p>将列表 key 下标为 index 的元素的值设置为 value</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LRANGE [key] [start] [stop]</span><br></pre></td></tr></table></figure>
-
-<p>返回列表 key 中指定区间内的元素，区间以偏移量 start 和 stop 指定</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LTRIM [key] [start] [stop]</span><br></pre></td></tr></table></figure>
-
-<p>对一个列表进行修剪(trim)，就是说，让列表只保留指定区间内的元素，不在指定区间之内的元素都将被删除</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BLPOP key [key …] timeout</span><br></pre></td></tr></table></figure>
-
-<p>列表的阻塞式(blocking)弹出原语</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BRPOP key [key …] timeout</span><br></pre></td></tr></table></figure>
-
-<p>列表的阻塞式(blocking)弹出原语</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BRPOPLPUSH source destination timeout</span><br></pre></td></tr></table></figure>
-
-<p>当列表 source 为空时， BRPOPLPUSH 命令将阻塞连接，直到等待超时，或有另一个客户端对 source 执行 LPUSH key value [value …] 或 RPUSH key value [value …] 命令为止。 超时参数设为 0 表示阻塞时间可以无限期延长(block indefinitely) 。</p>
-<h5 id="4-集合"><a href="#4-集合" class="headerlink" title="4.集合"></a>4.集合</h5><h5 id="5-有序集合"><a href="#5-有序集合" class="headerlink" title="5.有序集合"></a>5.有序集合</h5><h4 id="其它功能"><a href="#其它功能" class="headerlink" title="其它功能"></a>其它功能</h4><h5 id="1-订阅-发布"><a href="#1-订阅-发布" class="headerlink" title="1.订阅-发布"></a>1.订阅-发布</h5><h5 id="2-事务"><a href="#2-事务" class="headerlink" title="2.事务"></a>2.事务</h5><h3 id="miniIO"><a href="#miniIO" class="headerlink" title="miniIO"></a>miniIO</h3><h2 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h2><h3 id="golang"><a href="#golang" class="headerlink" title="golang"></a>golang</h3><h4 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h4><p>线程是操作系统调度的最基本单元，对个线程可以属于同一进程并共享内存空间，线程之间的通讯是基于共享内存进行的</p>
-<p>Go 语言的调度器通过使用与 CPU 数量相等的线程减少线程频繁切换的内存开销，同时在每一个线程上执行额外开销更低的 Goroutine 来降低操作系统和硬件的负载。</p>
-<h4 id="GC"><a href="#GC" class="headerlink" title="GC"></a>GC</h4><h4 id="常见panic"><a href="#常见panic" class="headerlink" title="常见panic"></a>常见panic</h4><ol>
-<li><p>数组越界</p>
-</li>
-<li><p>空指针异常</p>
-</li>
-<li><p>类型断言失败</p>
-</li>
-<li><p>通道为空、通道已关闭</p>
-</li>
-<li><p>死锁</p>
-</li>
-</ol>
-<h3 id="c"><a href="#c" class="headerlink" title="c++"></a>c++</h3><h3 id="java"><a href="#java" class="headerlink" title="java"></a>java</h3><h2 id="容器管理"><a href="#容器管理" class="headerlink" title="容器管理"></a>容器管理</h2><h3 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h3><h4 id="安装启动"><a href="#安装启动" class="headerlink" title="安装启动"></a>安装启动</h4><h5 id="指定下载源"><a href="#指定下载源" class="headerlink" title="指定下载源"></a>指定下载源</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum-config-manager \</span><br><span class="line">    --add-repo \</span><br><span class="line">    https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
-
-<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io</span><br><span class="line">或</span><br><span class="line">sudo yum list docker-ce --showduplicates | sort -r</span><br><span class="line">sudo yum install docker-ce-&lt;VERSION_STRING&gt; docker-ce-cli-&lt;VERSION_STRING&gt; containerd.io</span><br></pre></td></tr></table></figure>
-
-<h5 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
-
-<h3 id="k8s"><a href="#k8s" class="headerlink" title="k8s"></a>k8s</h3><p>使用 v1.18.0 版本进行学习，版本号格式遵循 Semantic Versioning 规则。</p>
-<h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><h5 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h5><p>Pod 是可以在 Kubernetes 中创建和管理的、最小的可部署的计算单元。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f myapp.yaml</span><br></pre></td></tr></table></figure>
-
-<p>拓扑分布约束（Topology Spread Constraints）：控制 Pods 在集群内故障域 之间的分布，例如区域（Region）、可用区（Zone）、节点和其他用户自定义拓扑域。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Pod</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">mypod</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line"><span class="attr">  topologySpreadConstraints:</span></span><br><span class="line"><span class="attr">    - maxSkew:</span> <span class="string">&lt;integer&gt;</span></span><br><span class="line"><span class="attr">      topologyKey:</span> <span class="string">&lt;string&gt;</span></span><br><span class="line"><span class="attr">      whenUnsatisfiable:</span> <span class="string">&lt;string&gt;</span></span><br><span class="line"><span class="attr">      labelSelector:</span> <span class="string">&lt;object&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get node</span><br></pre></td></tr></table></figure>
-
-<p>PodPreset：在 Pod 创建时，用户可以使用 PodPreset 对象将特定信息注入 Pod 中，这些信息可以包括 Secret、卷、卷挂载和环境变量。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get secret</span><br></pre></td></tr></table></figure>
-
-<h5 id="工作负载"><a href="#工作负载" class="headerlink" title="工作负载"></a>工作负载</h5><p>ReplicaSet 的目的是维护一组在任何时候都处于运行状态的 Pod 副本的稳定集合。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ReplicaSet</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">frontend</span></span><br><span class="line"><span class="attr">  labels:</span></span><br><span class="line"><span class="attr">    app:</span> <span class="string">guestbook</span></span><br><span class="line"><span class="attr">    tier:</span> <span class="string">frontend</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line"><span class="attr">  replicas:</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get rs</span><br></pre></td></tr></table></figure>
-
-<p>Deployment：控制器为 Pods 和 ReplicaSets 提供声明式的更新能力。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">nginx-deployment</span></span><br><span class="line"><span class="attr">  labels:</span></span><br><span class="line"><span class="attr">    app:</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line"><span class="attr">  replicas:</span> <span class="number">3</span></span><br><span class="line"><span class="attr">  selector:</span></span><br><span class="line"><span class="attr">    matchLabels:</span></span><br><span class="line"><span class="attr">      app:</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">  template:</span></span><br><span class="line"><span class="attr">    metadata:</span></span><br><span class="line"><span class="attr">      labels:</span></span><br><span class="line"><span class="attr">        app:</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">    spec:</span></span><br><span class="line"><span class="attr">      containers:</span></span><br><span class="line"><span class="attr">      - name:</span> <span class="string">nginx</span></span><br><span class="line"><span class="attr">        image:</span> <span class="attr">nginx:1.14.2</span></span><br><span class="line"><span class="attr">        ports:</span></span><br><span class="line"><span class="attr">        - containerPort:</span> <span class="number">80</span></span><br></pre></td></tr></table></figure>
-
-<p>启动deployment</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://k8s.io/examples/controllers/nginx-deployment.yaml</span><br></pre></td></tr></table></figure>
-
-<p>查看deployment</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get deployments</span><br></pre></td></tr></table></figure>
-
-<p>更新deployment</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl set image deployment/nginx-deployment nginx=nginx:1.16.1 --record</span><br></pre></td></tr></table></figure>
-
-<p>回滚deployment</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl rollout undo deployment.v1.apps/nginx-deployment</span><br></pre></td></tr></table></figure>
-
-<p>StatefulSet：是用来管理有状态应用的工作负载 API 对象。</p>
-<p>DaemonSet：确保全部（或者某些）节点上运行一个 Pod 的副本。 当有节点加入集群时， 也会为他们新增一个 Pod 。 当有节点从集群移除时，这些 Pod 也会被回收。删除 DaemonSet 将会删除它创建的所有 Pod。</p>
-<p>Job：会创建一个或者多个 Pods，并确保指定数量的 Pods 成功终止。 随着 Pods 成功结束，Job 跟踪记录成功完成的 Pods 个数。 当数量达到指定的成功个数阈值时，任务（即 Job）结束。 删除 Job 的操作会清除所创建的全部 Pods。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">batch/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Job</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">pi-with-ttl</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line"><span class="attr">  ttlSecondsAfterFinished:</span> <span class="number">100</span></span><br><span class="line"><span class="attr">  template:</span></span><br><span class="line"><span class="attr">    spec:</span></span><br><span class="line"><span class="attr">      containers:</span></span><br><span class="line"><span class="attr">      - name:</span> <span class="string">pi</span></span><br><span class="line"><span class="attr">        image:</span> <span class="string">perl</span></span><br><span class="line"><span class="attr">        command:</span> <span class="string">["perl",</span>  <span class="string">"-Mbignum=bpi"</span><span class="string">,</span> <span class="string">"-wle"</span><span class="string">,</span> <span class="string">"print bpi(2000)"</span><span class="string">]</span></span><br><span class="line"><span class="attr">      restartPolicy:</span> <span class="string">Never</span></span><br></pre></td></tr></table></figure>
-
-<p>删除job</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl delete jobs/pi</span><br></pre></td></tr></table></figure>
-
-<p>如果 Job 由某种更高级别的控制器来管理，例如 CronJobs， 则 Job 可以被 CronJob 基于特定的根据容量裁定的清理策略清理掉。自动清理已完成 Job （状态为 Complete 或 Failed）的另一种方式是使用由 TTL 控制器所提供 的 TTL 机制。 通过设置 Job 的 .spec.ttlSecondsAfterFinished 字段，可以让该控制器清理掉 已结束的资源。pi-with-ttl 在结束 100 秒之后，可以成为被自动删除的标的。如果该字段设置为 0，Job 在结束之后立即成为可被自动删除的对象。 如果该字段没有设置，Job 不会在结束之后被 TTL 控制器自动清除。</p>
-<p>Kubernetes 垃圾收集器的作用是删除某些曾经拥有属主（Owner）但现在不再拥有属主的对象。</p>
-<p>TTL 控制器：提供了一种 TTL 机制来限制已完成执行的资源对象的生命周期。 TTL 控制器目前只处理 Job， 可能以后会扩展以处理将完成执行的其他资源，例如 Pod 和自定义资源。</p>
-<p>Cron Job：创建基于时间调度的 Jobs。一个 CronJob 对象就像 crontab (cron table) 文件中的一行。 它用 Cron 格式进行编写， 并周期性地在给定的调度时间执行 Job。CronJobs 对于创建周期性的、反复重复的任务很有用。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">batch/v1beta1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">CronJob</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">hello</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line"><span class="attr">  schedule:</span> <span class="string">"*/1 * * * *"</span></span><br><span class="line"><span class="attr">  jobTemplate:</span></span><br><span class="line"><span class="attr">    spec:</span></span><br><span class="line"><span class="attr">      template:</span></span><br><span class="line"><span class="attr">        spec:</span></span><br><span class="line"><span class="attr">          containers:</span></span><br><span class="line"><span class="attr">          - name:</span> <span class="string">hello</span></span><br><span class="line"><span class="attr">            image:</span> <span class="string">busybox</span></span><br><span class="line"><span class="attr">            imagePullPolicy:</span> <span class="string">IfNotPresent</span></span><br><span class="line"><span class="attr">            args:</span></span><br><span class="line"><span class="bullet">            -</span> <span class="string">/bin/sh</span></span><br><span class="line"><span class="bullet">            -</span> <span class="bullet">-c</span></span><br><span class="line"><span class="bullet">            -</span> <span class="string">date;</span> <span class="string">echo</span> <span class="string">Hello</span> <span class="string">from</span> <span class="string">the</span> <span class="string">Kubernetes</span> <span class="string">cluster</span></span><br><span class="line"><span class="attr">          restartPolicy:</span> <span class="string">OnFailure</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h5><p>服务拓扑（Service Topology）可以让一个服务基于集群的 Node 拓扑进行流量路由。 例如，一个服务可以指定流量是被优先路由到一个和客户端在同一个 Node 或者在同一可用区域的端点。</p>
-<p> Service 定义了这样一种抽象：逻辑上的一组 Pod，一种可以访问它们的策略 —— 通常称为微服务。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">my-service</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line"><span class="attr">  selector:</span></span><br><span class="line"><span class="attr">    app:</span> <span class="string">MyApp</span></span><br><span class="line"><span class="attr">  ports:</span></span><br><span class="line"><span class="attr">    - protocol:</span> <span class="string">TCP</span></span><br><span class="line"><span class="attr">      port:</span> <span class="number">80</span></span><br><span class="line"><span class="attr">      targetPort:</span> <span class="number">9376</span></span><br></pre></td></tr></table></figure>
-
-<p>由于此服务没有选择算符，因此 不会 自动创建相应的 Endpoint 对象。 你可以通过手动添加 Endpoint 对象，将服务手动映射到运行该服务的网络地址和端口</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Endpoints</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">my-service</span></span><br><span class="line"><span class="attr">subsets:</span></span><br><span class="line"><span class="attr">  - addresses:</span></span><br><span class="line"><span class="attr">      - ip:</span> <span class="number">192.0</span><span class="number">.2</span><span class="number">.42</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="attr">      - port:</span> <span class="number">9376</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
-
-
+<h2 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h2><h2 id="深度学习框架"><a href="#深度学习框架" class="headerlink" title="深度学习框架"></a>深度学习框架</h2><h3 id="CV"><a href="#CV" class="headerlink" title="CV"></a>CV</h3><h3 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h3><h4 id="BERT"><a href="#BERT" class="headerlink" title="BERT"></a>BERT</h4><h3 id="BI"><a href="#BI" class="headerlink" title="BI"></a>BI</h3><h2 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h2><h3 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h3><h4 id="RSA1"><a href="#RSA1" class="headerlink" title="RSA1"></a>RSA1</h4><h4 id="RSA2"><a href="#RSA2" class="headerlink" title="RSA2"></a>RSA2</h4><h2 id="服务治理"><a href="#服务治理" class="headerlink" title="服务治理"></a>服务治理</h2><h3 id="监控"><a href="#监控" class="headerlink" title="监控"></a>监控</h3><h4 id="Prometheus"><a href="#Prometheus" class="headerlink" title="Prometheus"></a>Prometheus</h4><h4 id="Elasticsearch"><a href="#Elasticsearch" class="headerlink" title="Elasticsearch"></a>Elasticsearch</h4>
       
     </div>
     
@@ -774,29 +383,17 @@
       
         <div class="post-tags">
           
-            <a href="/tags/golang/" rel="tag"># golang</a>
-          
             <a href="/tags/计算机组成原理/" rel="tag"># 计算机组成原理</a>
           
-            <a href="/tags/数据结构与算法/" rel="tag"># 数据结构与算法</a>
+            <a href="/tags/容器管理/" rel="tag"># 容器管理</a>
           
-            <a href="/tags/计算机网络/" rel="tag"># 计算机网络</a>
+            <a href="/tags/消息系统/" rel="tag"># 消息系统</a>
           
-            <a href="/tags/操作系统/" rel="tag"># 操作系统</a>
+            <a href="/tags/深度学习框架/" rel="tag"># 深度学习框架</a>
           
-            <a href="/tags/数据库/" rel="tag"># 数据库</a>
+            <a href="/tags/安全/" rel="tag"># 安全</a>
           
-            <a href="/tags/c/" rel="tag"># c++</a>
-          
-            <a href="/tags/k8s/" rel="tag"># k8s</a>
-          
-            <a href="/tags/mysql/" rel="tag"># mysql</a>
-          
-            <a href="/tags/mongodb/" rel="tag"># mongodb</a>
-          
-            <a href="/tags/redis/" rel="tag"># redis</a>
-          
-            <a href="/tags/设计思想/" rel="tag"># 设计思想</a>
+            <a href="/tags/服务治理/" rel="tag"># 服务治理</a>
           
         </div>
       
@@ -818,6 +415,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/01/16/计算机知识图谱——数据结构与算法/" rel="prev" title="计算机知识图谱——数据结构与算法">
+                计算机知识图谱——数据结构与算法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -897,7 +498,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -910,7 +511,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -943,7 +544,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机组成原理"><span class="nav-number">1.</span> <span class="nav-text">计算机组成原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构与算法"><span class="nav-number">2.</span> <span class="nav-text">数据结构与算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-number">2.1.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#冒泡排序"><span class="nav-number">2.1.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择排序"><span class="nav-number">2.1.2.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插入排序"><span class="nav-number">2.1.3.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#归并排序"><span class="nav-number">2.1.4.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#快速排序"><span class="nav-number">2.1.5.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计数排序"><span class="nav-number">2.1.6.</span> <span class="nav-text">计数排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基数排序"><span class="nav-number">2.1.7.</span> <span class="nav-text">基数排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#堆排序"><span class="nav-number">2.1.8.</span> <span class="nav-text">堆排序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链表"><span class="nav-number">2.2.</span> <span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单向链表"><span class="nav-number">2.2.1.</span> <span class="nav-text">单向链表</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-链表反转"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">1. 链表反转</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-删除排序链表中的重复元素"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">2. 删除排序链表中的重复元素</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#双向链表"><span class="nav-number">2.2.2.</span> <span class="nav-text">双向链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#循环链表"><span class="nav-number">2.2.3.</span> <span class="nav-text">循环链表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哈希表"><span class="nav-number">2.3.</span> <span class="nav-text">哈希表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定址的方法"><span class="nav-number">2.3.1.</span> <span class="nav-text">定址的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决冲突的方法"><span class="nav-number">2.3.2.</span> <span class="nav-text">解决冲突的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#树"><span class="nav-number">2.4.</span> <span class="nav-text">树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历"><span class="nav-number">2.4.1.</span> <span class="nav-text">遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二叉搜索树"><span class="nav-number">2.4.2.</span> <span class="nav-text">二叉搜索树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#平衡二叉树"><span class="nav-number">2.4.3.</span> <span class="nav-text">平衡二叉树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#红黑树"><span class="nav-number">2.4.4.</span> <span class="nav-text">红黑树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#trie树"><span class="nav-number">2.4.5.</span> <span class="nav-text">trie树</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图"><span class="nav-number">2.5.</span> <span class="nav-text">图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态规划"><span class="nav-number">2.6.</span> <span class="nav-text">动态规划</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#寻找股票买入卖出的最佳时机"><span class="nav-number">2.6.1.</span> <span class="nav-text">寻找股票买入卖出的最佳时机</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络"><span class="nav-number">3.</span> <span class="nav-text">计算机网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI七层网络体系"><span class="nav-number">3.1.</span> <span class="nav-text">OSI七层网络体系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用层"><span class="nav-number">3.1.1.</span> <span class="nav-text">应用层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表示层"><span class="nav-number">3.1.2.</span> <span class="nav-text">表示层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#会话层"><span class="nav-number">3.1.3.</span> <span class="nav-text">会话层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传输层"><span class="nav-number">3.1.4.</span> <span class="nav-text">传输层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网络层"><span class="nav-number">3.1.5.</span> <span class="nav-text">网络层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据链路层"><span class="nav-number">3.1.6.</span> <span class="nav-text">数据链路层</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#物理层"><span class="nav-number">3.1.7.</span> <span class="nav-text">物理层</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作系统"><span class="nav-number">4.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机硬件"><span class="nav-number">4.1.</span> <span class="nav-text">计算机硬件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程和线程"><span class="nav-number">4.2.</span> <span class="nav-text">进程和线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程间通信"><span class="nav-number">4.3.</span> <span class="nav-text">进程间通信</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#信号"><span class="nav-number">4.3.1.</span> <span class="nav-text">信号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#管道"><span class="nav-number">4.3.2.</span> <span class="nav-text">管道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#共享内存"><span class="nav-number">4.3.3.</span> <span class="nav-text">共享内存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#先入先出队列"><span class="nav-number">4.3.4.</span> <span class="nav-text">先入先出队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#消息队列"><span class="nav-number">4.3.5.</span> <span class="nav-text">消息队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#套接字"><span class="nav-number">4.3.6.</span> <span class="nav-text">套接字</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调度算法"><span class="nav-number">4.4.</span> <span class="nav-text">调度算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#先来先服务"><span class="nav-number">4.4.1.</span> <span class="nav-text">先来先服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最短作业优先"><span class="nav-number">4.4.2.</span> <span class="nav-text">最短作业优先</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最短剩余时间优先"><span class="nav-number">4.4.3.</span> <span class="nav-text">最短剩余时间优先</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#轮询调度"><span class="nav-number">4.4.4.</span> <span class="nav-text">轮询调度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优先级调度"><span class="nav-number">4.4.5.</span> <span class="nav-text">优先级调度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多级队列"><span class="nav-number">4.4.6.</span> <span class="nav-text">多级队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最短进程优先"><span class="nav-number">4.4.7.</span> <span class="nav-text">最短进程优先</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#保证调度"><span class="nav-number">4.4.8.</span> <span class="nav-text">保证调度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#彩票调度"><span class="nav-number">4.4.9.</span> <span class="nav-text">彩票调度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#公平分享调度"><span class="nav-number">4.4.10.</span> <span class="nav-text">公平分享调度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面置换算法"><span class="nav-number">4.5.</span> <span class="nav-text">页面置换算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#最优页面置换算法"><span class="nav-number">4.5.1.</span> <span class="nav-text">最优页面置换算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#协程和线程的区别"><span class="nav-number">4.6.</span> <span class="nav-text">协程和线程的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">5.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql"><span class="nav-number">5.1.</span> <span class="nav-text">mysql</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题点"><span class="nav-number">5.1.1.</span> <span class="nav-text">问题点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#InnoDB"><span class="nav-number">5.1.2.</span> <span class="nav-text">InnoDB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事务"><span class="nav-number">5.1.3.</span> <span class="nav-text">事务</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mongodb"><span class="nav-number">5.2.</span> <span class="nav-text">mongodb</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#事务-1"><span class="nav-number">5.2.1.</span> <span class="nav-text">事务</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#redis"><span class="nav-number">5.3.</span> <span class="nav-text">redis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#命令和数据类型"><span class="nav-number">5.3.1.</span> <span class="nav-text">命令和数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-字符串"><span class="nav-number">5.3.1.1.</span> <span class="nav-text">1.字符串</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-哈希表"><span class="nav-number">5.3.1.2.</span> <span class="nav-text">2.哈希表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-列表"><span class="nav-number">5.3.1.3.</span> <span class="nav-text">3.列表</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-集合"><span class="nav-number">5.3.1.4.</span> <span class="nav-text">4.集合</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-有序集合"><span class="nav-number">5.3.1.5.</span> <span class="nav-text">5.有序集合</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其它功能"><span class="nav-number">5.3.2.</span> <span class="nav-text">其它功能</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-订阅-发布"><span class="nav-number">5.3.2.1.</span> <span class="nav-text">1.订阅-发布</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-事务"><span class="nav-number">5.3.2.2.</span> <span class="nav-text">2.事务</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#miniIO"><span class="nav-number">5.4.</span> <span class="nav-text">miniIO</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编程语言"><span class="nav-number">6.</span> <span class="nav-text">编程语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#golang"><span class="nav-number">6.1.</span> <span class="nav-text">golang</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#协程"><span class="nav-number">6.1.1.</span> <span class="nav-text">协程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GC"><span class="nav-number">6.1.2.</span> <span class="nav-text">GC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见panic"><span class="nav-number">6.1.3.</span> <span class="nav-text">常见panic</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c"><span class="nav-number">6.2.</span> <span class="nav-text">c++</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#java"><span class="nav-number">6.3.</span> <span class="nav-text">java</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器管理"><span class="nav-number">7.</span> <span class="nav-text">容器管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#docker"><span class="nav-number">7.1.</span> <span class="nav-text">docker</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装启动"><span class="nav-number">7.1.1.</span> <span class="nav-text">安装启动</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#指定下载源"><span class="nav-number">7.1.1.1.</span> <span class="nav-text">指定下载源</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装"><span class="nav-number">7.1.1.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#启动"><span class="nav-number">7.1.1.3.</span> <span class="nav-text">启动</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k8s"><span class="nav-number">7.2.</span> <span class="nav-text">k8s</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#概念"><span class="nav-number">7.2.1.</span> <span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#容器"><span class="nav-number">7.2.1.1.</span> <span class="nav-text">容器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#工作负载"><span class="nav-number">7.2.1.2.</span> <span class="nav-text">工作负载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#负载均衡"><span class="nav-number">7.2.1.3.</span> <span class="nav-text">负载均衡</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机组成原理"><span class="nav-number">1.</span> <span class="nav-text">计算机组成原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深度学习框架"><span class="nav-number">2.</span> <span class="nav-text">深度学习框架</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CV"><span class="nav-number">2.1.</span> <span class="nav-text">CV</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NLP"><span class="nav-number">2.2.</span> <span class="nav-text">NLP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#BERT"><span class="nav-number">2.2.1.</span> <span class="nav-text">BERT</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BI"><span class="nav-number">2.3.</span> <span class="nav-text">BI</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全"><span class="nav-number">3.</span> <span class="nav-text">安全</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非对称加密"><span class="nav-number">3.1.</span> <span class="nav-text">非对称加密</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#RSA1"><span class="nav-number">3.1.1.</span> <span class="nav-text">RSA1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RSA2"><span class="nav-number">3.1.2.</span> <span class="nav-text">RSA2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#服务治理"><span class="nav-number">4.</span> <span class="nav-text">服务治理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#监控"><span class="nav-number">4.1.</span> <span class="nav-text">监控</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Prometheus"><span class="nav-number">4.1.1.</span> <span class="nav-text">Prometheus</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Elasticsearch"><span class="nav-number">4.1.2.</span> <span class="nav-text">Elasticsearch</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -963,7 +564,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
